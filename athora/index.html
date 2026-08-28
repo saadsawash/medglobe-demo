@@ -1,0 +1,601 @@
+<!doctype html>
+<html class="dir--ltr hdt-scrollbar hdt-scroll-area hdt-links-cursor--false" lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>MedGlobe</title>
+  <meta name="description" content="MedGlobe selectively brings medical instruments, topical formulations, and healthcare devices to markets worldwide.">
+  <meta property="og:site_name" content="MedGlobe">
+  <meta property="og:title" content="MedGlobe">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="css/theme-vars.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/medglobe.css">
+  <script>
+    window.themeHDN = {
+      settings: {
+        currencyFormat: "${{amount}}",
+        moneyFormat: "${{amount}}",
+        moneyWithCurrencyFormat: "${{amount}} USD",
+        pageType: "index",
+        revealInView: true,
+        daysMax: 99,
+        shopTimezone: "-04:00"
+      },
+      strings: { goToItem: "Go to item [index]" },
+      cartItems: []
+    };
+    window.Shopify = window.Shopify || {};
+    Shopify.shop = "medglobe.local";
+    Shopify.locale = "en";
+    Shopify.currency = { active: "USD", rate: "1.0" };
+    Shopify.country = "US";
+    Shopify.routes = { root: "./" };
+    Shopify.designMode = false;
+  </script>
+  <script type="importmap">
+  {
+    "imports": {
+      "@theme/libs": "./js/libs.js",
+      "@theme/events": "./js/events.js",
+      "@theme/utilities": "./js/utilities.js",
+      "@theme/global": "./js/global.js",
+      "@theme/m": "./js/m.js",
+      "@theme/m-dom": "./js/m-dom.js",
+      "@theme/m-utils": "./js/m-utils.js",
+      "@theme/floating": "./js/floating.js",
+      "@theme/zoom-psw": "./js/zoom-psw.js",
+      "@theme/psw": "./js/es-psw.js",
+      "@theme/focus": "./js/focus.js"
+    }
+  }
+  </script>
+  <link rel="modulepreload" href="js/libs.js">
+  <link rel="modulepreload" href="js/lazy.js">
+  <link rel="modulepreload" href="js/events.js">
+  <link rel="modulepreload" href="js/utilities.js">
+  <link rel="modulepreload" href="js/global.js">
+  <script type="module" src="js/lazy.js"></script>
+  <script type="module" src="js/libs.js"></script>
+  <script type="module" src="js/global.js"></script>
+  <script type="module" src="js/custom.js"></script>
+</head>
+<body id="top" class="hdt-page-type-index">
+<header id="shopify-section-header" class="shopify-section shopify-section-group-header-group hdt-section hdt-section-header-group hdt-section-header--main">
+<style>
+body:has(> main > .section-sp-transparent.hdt-section:first-child):not(:has(> .hdt-section-header--main + .shopify-section)) {
+  --hdt-header-transparent: 1;
+}
+body:has(> main > .section-sp-transparent.hdt-section:first-child):not(:has(> .hdt-section-header--main + .shopify-section)) > main > .section-sp-transparent:first-child {
+  --section-height-offset: calc(var(--header-height) / 1.5);
+  margin-top: calc(var(--header-height, 54px) * -1);
+}
+</style>
+<hdt-sticky-header prefix="header" transparent sticky-type="always" color-scheme="scheme-1" logo="center" logo-mobile="center" class="hdt-block hdt-sticky-header hdt-sticky-header--boxed hdt-header__round hdt-sticky-height--compact">
+  <hdt-resize class="hdt-header-wrapper hdt-relative" prefix="header-inner">
+    <div class="hdt-header__logo">
+      <a href="#top" aria-label="MedGlobe, back to top">
+        <div class="header__logo-img-wrapper hdt-grid" style="--logo-width: 72px; --logo-width-mobile: 64px;">
+          <img src="images/medglobe/logo.webp" alt="MedGlobe" width="72" height="33" loading="eager" class="header__logo-img hdt-grid-1x1 hdt-place-self-center" sizes="(min-width: 1024px) 72px, 64px">
+        </div>
+      </a>
+    </div>
+    <hdt-anchor class="hdt-block hdt-header__nav hdt-s-text">
+      <button class="hdt-header__drawer-btn hdt-point-area hdt-flex lg:hdt-hidden" aria-label="Open drawer menu" aria-controls="MenuDrawer"><svg class="hdt-icon hdt-icon-hamburger" aria-hidden="true" focusable="false" width="22" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="22" height="2" rx="1" fill="currentColor"/><rect y="12" width="17" height="2" rx="1" fill="currentColor"/><rect y="6" width="10" height="2" rx="1" fill="currentColor"/></svg></button>
+      <nav class="hdt-header__inline-menu lg:hdt-flex hdt-hidden" style="--header-inline-size: 16px;--header-inline-fw: var(--font-medium);--header-inline-spacing: 0.0em;--header-inline-case: ">
+        <ul wrap-hover before-zi2 class="hdt-header__inline-list hdt-flex hdt-align-center hdt-flex-wrap hdt-header__font-body" role="list"><li><a el-hover href="#about" class="hdt-header__menu-item">About</a></li><li><a el-hover href="#what-we-do" class="hdt-header__menu-item">What we do</a></li></ul>
+      </nav>
+    </hdt-anchor>
+    <div class="hdt-header__utilities hdt-s-text">
+      <nav class="hdt-header__inline-menu lg:hdt-flex hdt-hidden" style="--header-inline-size: 16px;--header-inline-fw: var(--font-medium);--header-inline-spacing: 0.0em;--header-inline-case: ">
+        <ul wrap-hover before-zi2 class="hdt-header__inline-list hdt-flex hdt-align-center hdt-flex-wrap hdt-header__font-body" role="list"><li><a el-hover href="#presence" class="hdt-header__menu-item">Presence</a></li><li><a el-hover href="#contact" class="hdt-header__menu-item">Contact</a></li></ul>
+      </nav>
+    </div>
+    <div class="hdt-header-bg hdt-header-bg--1 hdt-hidden hdt-pe-none hdt-absolute"></div>
+    <div class="hdt-header-bg hdt-header-bg--2 hdt-hidden hdt-pe-none hdt-fixed"></div>
+  </hdt-resize>
+</hdt-sticky-header>
+<hdt-drawer color-scheme="scheme-5">
+  <dialog id="MenuDrawer" ref="dialog" class="hdt-dialog hdt-drawer hdt-menu-drawer-drilldown hdt-dialog-drawer--menu hdt-drawer--indent hdt-drawer--blur" pos="left" scroll-lock>
+    <div class="hdt-drawer_wrapper">
+      <div class="hdt-drawer__header">
+        <img src="images/medglobe/logo.webp" alt="MedGlobe" width="72" height="33" loading="lazy" class="header__logo-drawer" sizes="72px" style="--logo-width: 72px">
+        <button class="hdt-s-text hdt-close-dialog-btn" aria-controls="MenuDrawer" aria-label="Close"><svg class="hdt-icon hdt-icon-close" aria-hidden="true" focusable="false" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill="currentColor" d="M6.17839 5L9.75586 1.42253C10.0814 1.09701 10.0814 0.569661 9.75586 0.244141C9.43034 -0.0813802 8.90299 -0.0813802 8.57747 0.244141L5 3.82161L1.42253 0.244141C1.09701 -0.0813802 0.569661 -0.0813802 0.244141 0.244141C-0.0813802 0.569661 -0.0813802 1.09701 0.244141 1.42253L3.82161 5L0.244141 8.57747C-0.0813802 8.90299 -0.0813802 9.43034 0.244141 9.75586C0.406901 9.91862 0.620117 10 0.833333 10C1.04655 10 1.25977 9.91862 1.42253 9.75586L5 6.17839L8.57747 9.75586C8.74023 9.91862 8.95345 10 9.16667 10C9.37988 10 9.5931 9.91862 9.75586 9.75586C10.0814 9.43034 10.0814 8.90299 9.75586 8.57747L6.17839 5Z"/>
+</svg></button>
+      </div>
+      <hdt-scroll-hint class="hdt-drawer__inner hdt-scrollbar">
+        <ul class="hdt-menu-drawer-list"><li><a class="hdt-menu-drawer-item hdt-nav-link hdt-text-2xl hdt-font-medium hdt-menu-drawer-item--lv1" href="#about">About</a></li><li><a class="hdt-menu-drawer-item hdt-nav-link hdt-text-2xl hdt-font-medium hdt-menu-drawer-item--lv1" href="#what-we-do">What we do</a></li><li><a class="hdt-menu-drawer-item hdt-nav-link hdt-text-2xl hdt-font-medium hdt-menu-drawer-item--lv1" href="#presence">Presence</a></li><li><a class="hdt-menu-drawer-item hdt-nav-link hdt-text-2xl hdt-font-medium hdt-menu-drawer-item--lv1" href="#contact">Contact</a></li></ul>
+      </hdt-scroll-hint>
+    </div>
+  </dialog>
+</hdt-drawer>
+</header>
+<nav id="mg-section-rail" class="mg-rail" aria-label="On this page">
+  <ul class="mg-rail__list">
+    <li><a class="mg-rail__link" href="#about">About</a></li>
+    <li><a class="mg-rail__link" href="#what-we-do">What we do</a></li>
+    <li><a class="mg-rail__link" href="#presence">Presence</a></li>
+    <li><a class="mg-rail__link" href="#contact">Contact</a></li>
+  </ul>
+</nav>
+<script>(()=>{const header=document.querySelector(".hdt-section-header--main");if(!header)return;const sticky=header.querySelector("hdt-sticky-header");const freezeHeight=()=>{if(header.classList.contains("mg-header-compact"))return;let extra=0;document.querySelectorAll(".shopify-section-group-header-group:not(header)").forEach(el=>{extra+=el.offsetHeight});header.style.setProperty("--header-group-height",`${extra}px`);if(sticky)sticky.style.height="";const height=(sticky?sticky.getBoundingClientRect().height:header.clientHeight)||0;if(sticky&&height>=40)sticky.style.height=`${height.toFixed(2)}px`;document.documentElement.style.setProperty("--mg-header-height",`${height.toFixed(2)}px`)};window.addEventListener("resize",freezeHeight);window.addEventListener("load",freezeHeight);freezeHeight();requestAnimationFrame(freezeHeight);document.querySelectorAll("#MenuDrawer a[href^='#']").forEach(link=>{link.addEventListener("click",()=>{document.getElementById("MenuDrawer")?.close()})});const prefersReduce=()=>window.matchMedia("(prefers-reduced-motion: reduce)").matches;document.querySelectorAll('a[href^="#"]').forEach(link=>{const id=link.getAttribute("href");if(!id||id==="#")return;link.addEventListener("click",event=>{const target=id==="#top"?document.body:document.querySelector(id);if(!target)return;event.preventDefault();if(id==="#top")window.scrollTo({top:0,behavior:prefersReduce()?"auto":"smooth"});else target.scrollIntoView({behavior:prefersReduce()?"auto":"smooth",block:"start"});if(location.hash!==id)history.pushState(null,"",id);document.getElementById("MenuDrawer")?.close()})});const syncCompact=()=>{const compact=window.scrollY>80;header.classList.toggle("mg-header-compact",compact);const rail=document.getElementById("mg-section-rail");if(rail){rail.classList.toggle("mg-rail--visible",compact);const links=[...rail.querySelectorAll('a[href^="#"]')];const line=Math.max(160,window.innerHeight*0.28);let active=null;links.forEach(link=>{const target=document.querySelector(link.getAttribute("href"));if(target&&target.getBoundingClientRect().top<=line)active=link});links.forEach(link=>{if(link===active)link.setAttribute("aria-current","true");else link.removeAttribute("aria-current")})}};window.addEventListener("scroll",syncCompact,{passive:true});window.addEventListener("resize",syncCompact);syncCompact()})();</script>
+
+<main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+
+<section id="shopify-section-slideshow" class="shopify-section hdt-section hdt-trigger-reinit section-sp-transparent">
+  <div class="hdt-container-full">
+    <hdt-slideshow role="region" aria-label="MedGlobe introduction" type="slide" id="Slider-slideshow" class="hdt-slider hdt-slideshow hdt-relative" config='{ "autoHeight": true, "loop": false, "slidesToScroll": 1 }'>
+      <div class="hdt-slider__viewport md:hdt-height--full hdt-height--fixed">
+        <div class="hdt-slider__container">
+          <div color-scheme="scheme-4" class="hdt-block hdt-slider__slide hdt-slideshow__slide">
+            <style>#Slider-slideshow { --aspect-ratioapt: 550px; }</style>
+            <div class="hdt-media-overlap-content hdt-media-overlap-content--container" style="--overlap-content-mw: 670px; --color-overlay-opacity: 55%;">
+              <picture class="hdt-media-wrapper">
+                <img src="images/medglobe/hero.webp" alt="A modern clinical environment prepared for patient care" width="1600" height="900" loading="eager" fetchpriority="high" sizes="100vw">
+              </picture>
+              <div class="hdt-media-content hdt-place-self-center hdt-text-center xl:hdt-place-self-center-start xl:hdt-text-start">
+                <div class="hdt-media-content-wrapp">
+                  <div class="hdt-theme-block hdt-label-emoij hdt-font-medium hdt-text-lg">MedGlobe</div>
+                  <h1 class="hdt-theme-block hdt-heading-block hdt-h1 hdt-heading">Global Presence. Local Expertise.</h1>
+                  <div class="hdt-theme-block hdt-text-block rte hdt-s-text hdt-text-xl"><p>We choose healthcare products for the difference they can make — then build the right path to each market.</p></div>
+                  <div class="hdt-theme-block hdt-group-button-block hdt-flex-block hdt-flex-col" style="--gap-btns: 15px"><a class="hdt-btn hdt-btn--inner hdt-btn-solid hdt-btn--size-l hdt-btn--with-icon" href="#contact">
+    <span circle-bg-wrap class="hdt-inner-btn">Get in Touch<svg class="hdt-icon--45rtl" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="12" cy="12" r="12" fill="currentColor"/>
+  <path d="M8 14.4167C8 14.5917 8.05833 14.7083 8.175 14.825C8.40833 15.0583 8.75833 15.0583 8.99167 14.825L14.825 8.99167C15.0583 8.75833 15.0583 8.40833 14.825 8.175C14.5917 7.94167 14.2417 7.94167 14.0083 8.175L8.175 14.0083C8.05833 14.125 8 14.2417 8 14.4167Z" fill="var(--color-icon-btn)"/>
+  <path d="M8.58333 8.58333C8.58333 8.93333 8.81667 9.16667 9.16667 9.16667L13.8333 9.16667V13.8333C13.8333 14.1833 14.0667 14.4167 14.4167 14.4167C14.7667 14.4167 15 14.1833 15 13.8333V8.58333C15 8.23333 14.7667 8 14.4167 8L9.16667 8C8.81667 8 8.58333 8.23333 8.58333 8.58333Z" fill="var(--color-icon-btn)"/>
+</svg><hdt-circle-bg mousemove></hdt-circle-bg></span>
+</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </hdt-slideshow>
+  </div>
+</section>
+
+<section id="shopify-section-stats" class="shopify-section hdt-section">
+  <div color-scheme="scheme-2" class="hdt-text--with-icon hdt-layout--card hdt-s-gradient hdt-section-spacing" style="--section-pt: 44px; --section-pb: 44px; --section-pt-xl: 56px; --section-pb-xl: 56px">
+    <div class="hdt-container-xl">
+      <div class="hdt-iconbox-wrap hdt-rounded">
+        <hdt-slider id="Slider-stats" data-blocks_size="3" data-odd="0" class="hdt-slider hdt-slider__active-false md:hdt-slider__active-false xl:hdt-slider__active-false hdt-slide-spacing-x xl:hdt-slides-3 md:hdt-slides-3 hdt-slides-1" config='{ "autoHeight": false, "active": false, "loop": false, "fade": false, "slidesToScroll": 1 }'>
+          <div class="hdt-slider__viewport">
+            <div class="hdt-slider__container hdt-flex-wrap hdt-justify-center">
+              <div class="hdt-icon-item hdt-slider__slide">
+                <div class="hdt-icon-item-inner hdt-icon--pos-top hdt-text-center md:hdt-text-center">
+                  <div class="hdt-icon-box-content">
+                    <p class="hdt-heading hdt-h2">70+</p>
+                    <h2 class="hdt-heading hdt-text-lg">Years of combined expertise</h2>
+                    <div class="hdt-text-base hdt-s-text rte"><p>Sourcing, distribution, and support for medical instruments, topicals, and devices.</p></div>
+                  </div>
+                </div>
+              </div>
+              <div class="hdt-icon-item hdt-slider__slide">
+                <div class="hdt-icon-item-inner hdt-icon--pos-top hdt-text-center md:hdt-text-center">
+                  <div class="hdt-icon-box-content">
+                    <p class="hdt-heading hdt-h2">3</p>
+                    <h2 class="hdt-heading hdt-text-lg">Regions worldwide</h2>
+                    <div class="hdt-text-base hdt-s-text rte"><p>Americas, Europe, and Asia-Pacific — local knowledge with a global footprint.</p></div>
+                  </div>
+                </div>
+              </div>
+              <div class="hdt-icon-item hdt-slider__slide">
+                <div class="hdt-icon-item-inner hdt-icon--pos-top hdt-text-center md:hdt-text-center">
+                  <div class="hdt-icon-box-content">
+                    <p class="hdt-heading hdt-h2">5</p>
+                    <h2 class="hdt-heading hdt-text-lg">Ways we go to market</h2>
+                    <div class="hdt-text-base hdt-s-text rte"><p>Distribution, sourcing, regulatory guidance, logistics, and private label.</p></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </hdt-slider>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="shopify-section hdt-section">
+<style>
+#Section-about-media { --color-overlay-opacity: 48%; }
+@media screen and (max-width: 767px) { #Section-about-media .hdt-media-overlap-content { --media-overlap-content-h: 350px; --aspect-ratio: auto; } }
+@media screen and (min-width: 768px) { #Section-about-media .hdt-media-overlap-content { --media-overlap-content-h: auto; --aspect-ratio: 1.77777777778; } }
+</style>
+<div color-scheme="scheme-4" id="Section-about-media" class="hdt-section__hero-media hdt-section-spacing" style="--section-pt: 0px; --section-pb: 0px; --section-pt-xl: 0px; --section-pb-xl: 0px;">
+  <div class="hdt-container-full">
+    <div class="hdt-media-overlap-content hdt-mobile-content-below" style="--color-overlay-opacity: 48%">
+      <picture class="hdt-media-wrapper">
+        <img src="images/medglobe/presence.webp" alt="MedGlobe coordinates healthcare supply across international markets" width="1200" height="800" loading="lazy" sizes="100vw">
+      </picture>
+      <div class="hdt-media-content hdt-place-self-center-start hdt-content-horizontal" style="--overlap-content-mw: 680px">
+        <div class="hdt-media-content-wrapp">
+          <div class="hdt-theme-block hdt-label-emoij hdt-font-medium hdt-text-lg">About MedGlobe</div>
+          <h2 class="hdt-theme-block hdt-heading-block hdt-h1 hdt-heading">Experience across markets. Judgment at every step.</h2>
+          <div class="hdt-theme-block hdt-text-block rte hdt-s-text hdt-text-xl">
+            <p>Our team brings more than 70 years of combined experience across sourcing, market entry, distribution, and healthcare partnerships. That experience helps us ask better questions before a product ever crosses a border.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="mission" class="shopify-section hdt-section">
+<div color-scheme="scheme-2" class="hdt-section-spacing hdt-s-gradient" style="--section-pt: 60px; --section-pb: 60px; --section-pt-xl: 88px; --section-pb-xl: 88px">
+  <div class="hdt-container">
+    <div class="hdt-section-title hdt-text-left">
+      <div class="hdt-inner-section-title" style="--title-custom-width: 860px">
+        <div class="hdt-theme-block hdt-label-emoij hdt-font-medium hdt-text-lg">Why we choose</div>
+        <h2 class="hdt-theme-block hdt-heading-block hdt-h2 hdt-heading">Patient impact before product volume.</h2>
+        <div class="hdt-theme-block hdt-text-block rte hdt-s-text hdt-text-xl"><p>We do not carry every product that could sell. We scrutinize the manufacturer, the evidence, the market need, and the people a product is meant to help.</p>
+<p>When those pieces align, MedGlobe brings together local knowledge, regulatory guidance, and international distribution to move a worthwhile product responsibly from maker to market.</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="what-we-do" class="shopify-section hdt-section">
+<div color-scheme="scheme-4" class="mg-ways hdt-text--with-icon hdt-section-spacing hdt-s-gradient" style="--section-pt: 60px; --section-pb: 60px; --section-pt-xl: 88px; --section-pb-xl: 88px">
+  <div class="hdt-container">
+    <div class="hdt-section-title hdt-text-left">
+      <div class="hdt-inner-section-title" style="--title-custom-width: 860px">
+        <div class="hdt-theme-block hdt-label-emoij hdt-font-medium hdt-text-lg">What we do</div>
+        <h2 class="hdt-theme-block hdt-heading-block hdt-h2 hdt-heading">Five ways we get you to market</h2>
+        <div class="hdt-theme-block hdt-text-block rte hdt-s-text hdt-text-xl"><p>Distribution, sourcing, regulatory guidance, logistics, and private label — one standard of care from manufacturer to market.</p></div>
+      </div>
+    </div>
+    <div class="mg-bento" data-mg-bento>
+      <article class="mg-bento__card">
+        <div class="mg-bento__media" aria-hidden="true">
+          <img class="mg-bento__img" src="images/medglobe/way-01.webp" alt="" width="1600" height="1066" loading="lazy">
+        </div>
+        <div class="mg-bento__content">
+          <h3 class="mg-bento__title">Distribution &amp; commercialization</h3>
+          <p class="mg-bento__teaser">Clinics, pharmacies, hospitals, and retail.</p>
+        </div>
+        <div class="mg-bento__plus" aria-hidden="true"><span></span></div>
+        <div class="mg-bento__info">
+          <p class="mg-bento__copy">From inventory and fulfillment to channel development, we help manufacturers reach clinics, pharmacies, hospitals, and retail networks.</p>
+        </div>
+        <button type="button" class="mg-bento__hit" aria-expanded="false" aria-label="Distribution and commercialization"></button>
+      </article>
+      <article class="mg-bento__card">
+        <div class="mg-bento__media" aria-hidden="true">
+          <img class="mg-bento__img" src="images/medglobe/way-02.webp" alt="" width="1200" height="1600" loading="lazy">
+        </div>
+        <div class="mg-bento__content">
+          <h3 class="mg-bento__title">Sourcing &amp; vendor management</h3>
+          <p class="mg-bento__teaser">Reliable partners, pricing, and full traceability.</p>
+        </div>
+        <div class="mg-bento__plus" aria-hidden="true"><span></span></div>
+        <div class="mg-bento__info">
+          <p class="mg-bento__copy">We identify and partner with high-quality manufacturers, with supply agreements built for reliability, pricing, and full traceability.</p>
+        </div>
+        <button type="button" class="mg-bento__hit" aria-expanded="false" aria-label="Sourcing and vendor management"></button>
+      </article>
+      <article class="mg-bento__card">
+        <div class="mg-bento__media" aria-hidden="true">
+          <img class="mg-bento__img" src="images/medglobe/way-03.webp" alt="" width="1200" height="1600" loading="lazy">
+        </div>
+        <div class="mg-bento__content">
+          <h3 class="mg-bento__title">Regulatory navigation</h3>
+          <p class="mg-bento__teaser">Documentation, labeling, and claims that fit local rules.</p>
+        </div>
+        <div class="mg-bento__plus" aria-hidden="true"><span></span></div>
+        <div class="mg-bento__info">
+          <p class="mg-bento__copy">For products that do not require FDA clearance, we guide market-specific documentation, labeling, and claims so they fit local rules.</p>
+        </div>
+        <button type="button" class="mg-bento__hit" aria-expanded="false" aria-label="Regulatory navigation"></button>
+      </article>
+      <article class="mg-bento__card">
+        <div class="mg-bento__media" aria-hidden="true">
+          <img class="mg-bento__img" src="images/medglobe/way-04.webp" alt="" width="1600" height="1066" loading="lazy">
+        </div>
+        <div class="mg-bento__content">
+          <h3 class="mg-bento__title">Logistics &amp; customs</h3>
+          <p class="mg-bento__teaser">Warehousing, cross-border shipping, and last-mile delivery.</p>
+        </div>
+        <div class="mg-bento__plus" aria-hidden="true"><span></span></div>
+        <div class="mg-bento__info">
+          <p class="mg-bento__copy">Warehousing, cross-border shipping, customs clearance, and last-mile delivery — designed for medical and cosmetic supply chains.</p>
+        </div>
+        <button type="button" class="mg-bento__hit" aria-expanded="false" aria-label="Logistics and customs"></button>
+      </article>
+      <article class="mg-bento__card">
+        <div class="mg-bento__media" aria-hidden="true">
+          <img class="mg-bento__img" src="images/medglobe/way-05.webp" alt="" width="1920" height="1080" loading="lazy">
+        </div>
+        <div class="mg-bento__content">
+          <h3 class="mg-bento__title">Private label &amp; co-branding</h3>
+          <p class="mg-bento__teaser">From formulation sourcing to packaging coordination.</p>
+        </div>
+        <div class="mg-bento__plus" aria-hidden="true"><span></span></div>
+        <div class="mg-bento__info">
+          <p class="mg-bento__copy">From formulation sourcing to packaging coordination, we support private-label and co-branded launches end to end.</p>
+        </div>
+        <button type="button" class="mg-bento__hit" aria-expanded="false" aria-label="Private label and co-branding"></button>
+      </article>
+    </div>
+    <div class="mg-partners">
+      <p class="hdt-font-semibold">Built for careful market entry</p>
+      <p>We work with distributors, retailers, clinics, laboratories, pharmacies, and healthcare organizations that need a transparent path from manufacturer to market.</p>
+    </div>
+  </div>
+</div>
+</section>
+<script>(()=>{document.querySelectorAll(".mg-bento__img").forEach(img=>{img.addEventListener("error",()=>{img.hidden=true})});document.querySelectorAll("[data-mg-bento]").forEach(root=>{const cards=[...root.querySelectorAll(".mg-bento__card")];cards.forEach(card=>{const btn=card.querySelector(".mg-bento__hit");if(!btn)return;btn.addEventListener("click",()=>{const open=card.classList.contains("is-open");cards.forEach(other=>{other.classList.remove("is-open");other.querySelector(".mg-bento__hit")?.setAttribute("aria-expanded","false")});if(!open){card.classList.add("is-open");btn.setAttribute("aria-expanded","true")}})})})})();</script>
+
+<section id="focus" class="shopify-section hdt-section">
+<div color-scheme="scheme-2" class="mg-kinds hdt-text--with-icon hdt-section-spacing hdt-s-gradient" style="--section-pt: 60px; --section-pb: 60px; --section-pt-xl: 88px; --section-pb-xl: 88px">
+  <div class="hdt-container">
+    <div class="hdt-section-title hdt-text-left">
+      <div class="hdt-inner-section-title" style="--title-custom-width: 860px">
+        <div class="hdt-theme-block hdt-label-emoij hdt-font-medium hdt-text-lg">Focus</div>
+        <h2 class="hdt-theme-block hdt-heading-block hdt-h2 hdt-heading">Three kinds of work. One standard.</h2>
+        <div class="hdt-theme-block hdt-text-block rte hdt-s-text hdt-text-xl"><p>Instruments, topicals, and devices — the same scrutiny on every line we carry.</p></div>
+      </div>
+    </div>
+    <div class="hdt-iconbox-wrap hdt-rounded">
+      <hdt-slider id="Slider-categories-icons" data-blocks_size="3" data-odd="0" class="hdt-slider hdt-slider__active-false md:hdt-slider__active-false xl:hdt-slider__active-false hdt-slide-spacing-x xl:hdt-slides-3 md:hdt-slides-3 hdt-slides-1" config='{ "autoHeight": false, "active": false, "loop": false, "fade": false, "slidesToScroll": 1 }'>
+        <div class="hdt-slider__viewport">
+          <div class="hdt-slider__container md:hdt-flex-wrap md:hdt-justify-center"><div class="hdt-icon-item hdt-slider__slide">
+  <div class="hdt-icon-item-inner hdt-icon--pos-top hdt-text-center md:hdt-text-center">
+    <div class="hdt-icon-wrap hdt-icon__type-cricle" style="--icon-h-md: 18px;--icon-h: 18px"><svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.1274 0H4.8726C4.15657 0.000152921 3.46993 0.284717 2.9637 0.7911L0.7911 2.9637C0.284717 3.46993 0.000152921 4.15657 0 4.8726V15.3C0 16.0161 0.284464 16.7028 0.790812 17.2092C1.29716 17.7155 1.98392 18 2.7 18H15.3C16.0161 18 16.7028 17.7155 17.2092 17.2092C17.7155 16.7028 18 16.0161 18 15.3V4.8726C17.9998 4.15657 17.7153 3.46993 17.2089 2.9637L15.0363 0.7911C14.5301 0.284717 13.8434 0.000152921 13.1274 0ZM15.3 3.6L13.7637 2.0637C13.595 1.89491 13.3661 1.80005 13.1274 1.8H4.8726C4.63392 1.80005 4.40504 1.89491 4.2363 2.0637L2.7 3.6H15.3ZM1.8 6.3V15.3C1.8 15.5387 1.89482 15.7676 2.0636 15.9364C2.23239 16.1052 2.46131 16.2 2.7 16.2H15.3C15.5387 16.2 15.7676 16.1052 15.9364 15.9364C16.1052 15.7676 16.2 15.5387 16.2 15.3V6.3C16.2 6.06131 16.1052 5.83239 15.9364 5.6636C15.7676 5.49482 15.5387 5.4 15.3 5.4H2.7C2.46131 5.4 2.23239 5.49482 2.0636 5.6636C1.89482 5.83239 1.8 6.06131 1.8 6.3ZM11.7 7.2C11.4613 7.2 11.2324 7.29482 11.0636 7.4636C10.8948 7.63239 10.8 7.8613 10.8 8.1V9.9C10.8 10.1387 10.8948 10.3676 11.0636 10.5364C11.2324 10.7052 11.4613 10.8 11.7 10.8H13.5C13.7387 10.8 13.9676 10.7052 14.1364 10.5364C14.3052 10.3676 14.4 10.1387 14.4 9.9V8.1C14.4 7.8613 14.3052 7.63239 14.1364 7.4636C13.9676 7.29482 13.7387 7.2 13.5 7.2H11.7ZM10.8 12.6C10.8 12.3613 10.8948 12.1324 11.0636 11.9636C11.2324 11.7948 11.4613 11.7 11.7 11.7H13.5C13.7387 11.7 13.9676 11.7948 14.1364 11.9636C14.3052 12.1324 14.4 12.3613 14.4 12.6C14.4 12.8387 14.3052 13.0676 14.1364 13.2364C13.9676 13.4052 13.7387 13.5 13.5 13.5H11.7C11.4613 13.5 11.2324 13.4052 11.0636 13.2364C10.8948 13.0676 10.8 12.8387 10.8 12.6Z" fill="currentColor"/></svg></div>
+    <div class="hdt-icon-box-content">
+      <h2 class="hdt-heading hdt-text-lg">Medical instruments</h2>
+      <div class="hdt-text-base hdt-s-text rte"><p>Surgical tools, diagnostic instruments, and clinical disposables sourced from vetted manufacturers with full supply-chain traceability.</p></div>
+    </div>
+  </div>
+</div><div class="hdt-icon-item hdt-slider__slide">
+  <div class="hdt-icon-item-inner hdt-icon--pos-top hdt-text-center md:hdt-text-center">
+    <div class="hdt-icon-wrap hdt-icon__type-cricle" style="--icon-h-md: 18px;--icon-h: 18px"><svg aria-hidden="true" focusable="false" width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.1213 0.29289C5.7308 -0.09763 5.0976 -0.09763 4.7071 0.29289L0 5L4.7071 9.7071C5.0976 10.0976 5.7308 10.0976 6.1213 9.7071C6.5118 9.3166 6.5118 8.6834 6.1213 8.2929L3.8284 6H11.4142C14.1756 6 16.4142 8.2386 16.4142 11C16.4142 13.7614 14.1756 16 11.4142 16H5.568C5.0158 16 4.568 16.4477 4.568 17C4.568 17.5523 5.0158 18 5.568 18H11.4142C15.2802 18 18.4142 14.866 18.4142 11C18.4142 7.134 15.2802 4 11.4142 4H3.8284L6.1213 1.70711C6.5118 1.31658 6.5118 0.68342 6.1213 0.29289Z" fill="currentColor"/></svg></div>
+    <div class="hdt-icon-box-content">
+      <h2 class="hdt-heading hdt-text-lg">Topical creams &amp; skincare</h2>
+      <div class="hdt-text-base hdt-s-text rte"><p>Therapeutic and cosmetic formulations for professional and retail channels, responsibly sourced and evaluated for market fit.</p></div>
+    </div>
+  </div>
+</div><div class="hdt-icon-item hdt-slider__slide">
+  <div class="hdt-icon-item-inner hdt-icon--pos-top hdt-text-center md:hdt-text-center">
+    <div class="hdt-icon-wrap hdt-icon__type-cricle" style="--icon-h-md: 18px;--icon-h: 18px"><svg aria-hidden="true" focusable="false" width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.36364 1.63636C6.00799 1.63636 4.90909 2.7353 4.90909 4.09091V6.54732C5.15227 6.54545 5.41471 6.54545 5.69821 6.54545H9.02905C9.31254 6.54545 9.57502 6.54545 9.81818 6.54733V4.09091C9.81818 2.7353 8.71928 1.63636 7.36364 1.63636ZM11.4484 6.64634C11.4524 6.61328 11.4545 6.57961 11.4545 6.54545V4.09091C11.4545 1.83157 9.62296 0 7.36364 0C5.10429 0 3.27273 1.83157 3.27273 4.09091V6.54545C3.27273 6.57961 3.27482 6.61329 3.27889 6.64634C3.01548 6.69089 2.76653 6.75697 2.52538 6.85685C1.523 7.27206 0.726603 8.06842 0.3114 9.07086C0.138666 9.48788 0.0670175 9.92831 0.0330384 10.4263C-7.92776e-06 10.9107 -7.93029e-06 11.5058 2.51526e-07 12.2437V12.3018C-7.93029e-06 13.0396 -7.92776e-06 13.6348 0.0330384 14.1191C0.0670175 14.6171 0.138666 15.0576 0.3114 15.4746C0.726603 16.477 1.523 17.2734 2.52538 17.6886C2.94241 17.8613 3.38282 17.933 3.88089 17.9669C4.36525 18 4.96041 18 5.69821 18H9.02905C9.76688 18 10.362 18 10.8464 17.9669C11.3444 17.933 11.7848 17.8613 12.2019 17.6886C13.2043 17.2734 14.0006 16.477 14.4159 15.4746C14.5886 15.0576 14.6603 14.6171 14.6942 14.1191C14.7273 13.6348 14.7273 13.0396 14.7273 12.3018V12.2437C14.7273 11.5058 14.7273 10.9107 14.6942 10.4263C14.6603 9.92831 14.5886 9.48788 14.4159 9.07086C14.0006 8.06842 13.2043 7.27206 12.2019 6.85685C11.9608 6.75697 11.7118 6.69089 11.4484 6.64634ZM3.99228 8.21103C3.57753 8.23934 3.33601 8.29227 3.1516 8.36869C2.55017 8.61775 2.07232 9.09565 1.8232 9.69701C1.74682 9.88143 1.69391 10.123 1.66561 10.5377C1.63681 10.9598 1.63636 11.4991 1.63636 12.2727C1.63636 13.0464 1.63681 13.5857 1.66561 14.0078C1.69391 14.4225 1.74682 14.664 1.8232 14.8484C2.07232 15.4498 2.55017 15.9277 3.1516 16.1768C3.33601 16.2532 3.57753 16.3061 3.99228 16.3344C4.41437 16.3632 4.95362 16.3636 5.72727 16.3636H9C9.77367 16.3636 10.3129 16.3632 10.735 16.3344C11.1498 16.3061 11.3913 16.2532 11.5757 16.1768C12.1771 15.9277 12.655 15.4498 12.904 14.8484C12.9805 14.664 13.0334 14.4225 13.0617 14.0078C13.0905 13.5857 13.0909 13.0464 13.0909 12.2727C13.0909 11.4991 13.0905 10.9598 13.0617 10.5377C13.0334 10.123 12.9805 9.88143 12.904 9.69701C12.655 9.09565 12.1771 8.61775 11.5757 8.36869C11.3913 8.29227 11.1498 8.23934 10.735 8.21103C10.3129 8.18223 9.77367 8.18182 9 8.18182H5.72727C4.95362 8.18182 4.41437 8.18223 3.99228 8.21103ZM7.36364 10.6364C7.81552 10.6364 8.18182 11.0027 8.18182 11.4545V13.0909C8.18182 13.5428 7.81552 13.9091 7.36364 13.9091C6.91175 13.9091 6.54545 13.5428 6.54545 13.0909V11.4545C6.54545 11.0027 6.91175 10.6364 7.36364 10.6364Z" fill="currentColor"/></svg></div>
+    <div class="hdt-icon-box-content">
+      <h2 class="hdt-heading hdt-text-lg">Devices &amp; accessories</h2>
+      <div class="hdt-text-base hdt-s-text rte"><p>Wellness devices, non-invasive accessories, and other products that do not require FDA clearance in target markets, with market-appropriate documentation and labeling.</p></div>
+    </div>
+  </div>
+</div></div>
+        </div>
+      </hdt-slider>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="values-intro" class="shopify-section hdt-section">
+<div color-scheme="scheme-2" class="hdt-section-spacing hdt-s-gradient" style="--section-pt: 60px; --section-pb: 20px; --section-pt-xl: 88px; --section-pb-xl: 24px">
+  <div class="hdt-container">
+    <div class="hdt-section-title hdt-text-left">
+      <div class="hdt-inner-section-title" style="--title-custom-width: 860px">
+        <div class="hdt-theme-block hdt-label-emoij hdt-font-medium hdt-text-lg">Our values</div>
+        <h2 class="hdt-theme-block hdt-heading-block hdt-h2 hdt-heading">What we will not compromise</h2>
+        <div class="hdt-theme-block hdt-text-block rte hdt-s-text hdt-text-xl"><p>These are not slogans around the work. They are the tests we apply to every manufacturer, market, and partnership.</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="values-icons" class="shopify-section hdt-section">
+<div color-scheme="scheme-2" class="mg-values hdt-text--with-icon hdt-s-gradient hdt-section-spacing" style="--section-pt: 0px; --section-pb: 60px; --section-pt-xl: 0px; --section-pb-xl: 88px">
+  <div class="hdt-container-xl">
+    <div class="hdt-iconbox-wrap hdt-rounded">
+      <hdt-slider id="Slider-values-icons" data-blocks_size="5" data-odd="0" class="hdt-slider hdt-slider__active-false md:hdt-slider__active-false xl:hdt-slider__active-false hdt-slide-spacing-x xl:hdt-slides-5 md:hdt-slides-2 hdt-slides-1" config='{ "autoHeight": false, "active": false, "loop": false, "fade": false, "slidesToScroll": 1 }'>
+        <div class="hdt-slider__viewport">
+          <div class="hdt-slider__container md:hdt-flex-wrap md:hdt-justify-center"><div class="hdt-icon-item hdt-slider__slide">
+  <div class="hdt-icon-item-inner hdt-icon--pos-top hdt-text-center md:hdt-text-center">
+    <div class="hdt-icon-wrap hdt-icon__type-cricle" style="--icon-h-md: 18px;--icon-h: 18px"><svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.1274 0H4.8726C4.15657 0.000152921 3.46993 0.284717 2.9637 0.7911L0.7911 2.9637C0.284717 3.46993 0.000152921 4.15657 0 4.8726V15.3C0 16.0161 0.284464 16.7028 0.790812 17.2092C1.29716 17.7155 1.98392 18 2.7 18H15.3C16.0161 18 16.7028 17.7155 17.2092 17.2092C17.7155 16.7028 18 16.0161 18 15.3V4.8726C17.9998 4.15657 17.7153 3.46993 17.2089 2.9637L15.0363 0.7911C14.5301 0.284717 13.8434 0.000152921 13.1274 0ZM15.3 3.6L13.7637 2.0637C13.595 1.89491 13.3661 1.80005 13.1274 1.8H4.8726C4.63392 1.80005 4.40504 1.89491 4.2363 2.0637L2.7 3.6H15.3ZM1.8 6.3V15.3C1.8 15.5387 1.89482 15.7676 2.0636 15.9364C2.23239 16.1052 2.46131 16.2 2.7 16.2H15.3C15.5387 16.2 15.7676 16.1052 15.9364 15.9364C16.1052 15.7676 16.2 15.5387 16.2 15.3V6.3C16.2 6.06131 16.1052 5.83239 15.9364 5.6636C15.7676 5.49482 15.5387 5.4 15.3 5.4H2.7C2.46131 5.4 2.23239 5.49482 2.0636 5.6636C1.89482 5.83239 1.8 6.06131 1.8 6.3ZM11.7 7.2C11.4613 7.2 11.2324 7.29482 11.0636 7.4636C10.8948 7.63239 10.8 7.8613 10.8 8.1V9.9C10.8 10.1387 10.8948 10.3676 11.0636 10.5364C11.2324 10.7052 11.4613 10.8 11.7 10.8H13.5C13.7387 10.8 13.9676 10.7052 14.1364 10.5364C14.3052 10.3676 14.4 10.1387 14.4 9.9V8.1C14.4 7.8613 14.3052 7.63239 14.1364 7.4636C13.9676 7.29482 13.7387 7.2 13.5 7.2H11.7ZM10.8 12.6C10.8 12.3613 10.8948 12.1324 11.0636 11.9636C11.2324 11.7948 11.4613 11.7 11.7 11.7H13.5C13.7387 11.7 13.9676 11.7948 14.1364 11.9636C14.3052 12.1324 14.4 12.3613 14.4 12.6C14.4 12.8387 14.3052 13.0676 14.1364 13.2364C13.9676 13.4052 13.7387 13.5 13.5 13.5H11.7C11.4613 13.5 11.2324 13.4052 11.0636 13.2364C10.8948 13.0676 10.8 12.8387 10.8 12.6Z" fill="currentColor"/></svg></div>
+    <div class="hdt-icon-box-content">
+      <h2 class="hdt-heading hdt-text-lg">Integrity</h2>
+      <div class="hdt-text-base hdt-s-text rte"><p>We build long-term partnerships on honesty, transparency, and compliance.</p></div>
+    </div>
+  </div>
+</div><div class="hdt-icon-item hdt-slider__slide">
+  <div class="hdt-icon-item-inner hdt-icon--pos-top hdt-text-center md:hdt-text-center">
+    <div class="hdt-icon-wrap hdt-icon__type-cricle" style="--icon-h-md: 18px;--icon-h: 18px"><svg aria-hidden="true" focusable="false" width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.1213 0.29289C5.7308 -0.09763 5.0976 -0.09763 4.7071 0.29289L0 5L4.7071 9.7071C5.0976 10.0976 5.7308 10.0976 6.1213 9.7071C6.5118 9.3166 6.5118 8.6834 6.1213 8.2929L3.8284 6H11.4142C14.1756 6 16.4142 8.2386 16.4142 11C16.4142 13.7614 14.1756 16 11.4142 16H5.568C5.0158 16 4.568 16.4477 4.568 17C4.568 17.5523 5.0158 18 5.568 18H11.4142C15.2802 18 18.4142 14.866 18.4142 11C18.4142 7.134 15.2802 4 11.4142 4H3.8284L6.1213 1.70711C6.5118 1.31658 6.5118 0.68342 6.1213 0.29289Z" fill="currentColor"/></svg></div>
+    <div class="hdt-icon-box-content">
+      <h2 class="hdt-heading hdt-text-lg">Quality</h2>
+      <div class="hdt-text-base hdt-s-text rte"><p>Every manufacturer is vetted. Every shipment is meant to be reliable.</p></div>
+    </div>
+  </div>
+</div><div class="hdt-icon-item hdt-slider__slide">
+  <div class="hdt-icon-item-inner hdt-icon--pos-top hdt-text-center md:hdt-text-center">
+    <div class="hdt-icon-wrap hdt-icon__type-cricle" style="--icon-h-md: 18px;--icon-h: 18px"><svg aria-hidden="true" focusable="false" width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.36364 1.63636C6.00799 1.63636 4.90909 2.7353 4.90909 4.09091V6.54732C5.15227 6.54545 5.41471 6.54545 5.69821 6.54545H9.02905C9.31254 6.54545 9.57502 6.54545 9.81818 6.54733V4.09091C9.81818 2.7353 8.71928 1.63636 7.36364 1.63636ZM11.4484 6.64634C11.4524 6.61328 11.4545 6.57961 11.4545 6.54545V4.09091C11.4545 1.83157 9.62296 0 7.36364 0C5.10429 0 3.27273 1.83157 3.27273 4.09091V6.54545C3.27273 6.57961 3.27482 6.61329 3.27889 6.64634C3.01548 6.69089 2.76653 6.75697 2.52538 6.85685C1.523 7.27206 0.726603 8.06842 0.3114 9.07086C0.138666 9.48788 0.0670175 9.92831 0.0330384 10.4263C-7.92776e-06 10.9107 -7.93029e-06 11.5058 2.51526e-07 12.2437V12.3018C-7.93029e-06 13.0396 -7.92776e-06 13.6348 0.0330384 14.1191C0.0670175 14.6171 0.138666 15.0576 0.3114 15.4746C0.726603 16.477 1.523 17.2734 2.52538 17.6886C2.94241 17.8613 3.38282 17.933 3.88089 17.9669C4.36525 18 4.96041 18 5.69821 18H9.02905C9.76688 18 10.362 18 10.8464 17.9669C11.3444 17.933 11.7848 17.8613 12.2019 17.6886C13.2043 17.2734 14.0006 16.477 14.4159 15.4746C14.5886 15.0576 14.6603 14.6171 14.6942 14.1191C14.7273 13.6348 14.7273 13.0396 14.7273 12.3018V12.2437C14.7273 11.5058 14.7273 10.9107 14.6942 10.4263C14.6603 9.92831 14.5886 9.48788 14.4159 9.07086C14.0006 8.06842 13.2043 7.27206 12.2019 6.85685C11.9608 6.75697 11.7118 6.69089 11.4484 6.64634ZM3.99228 8.21103C3.57753 8.23934 3.33601 8.29227 3.1516 8.36869C2.55017 8.61775 2.07232 9.09565 1.8232 9.69701C1.74682 9.88143 1.69391 10.123 1.66561 10.5377C1.63681 10.9598 1.63636 11.4991 1.63636 12.2727C1.63636 13.0464 1.63681 13.5857 1.66561 14.0078C1.69391 14.4225 1.74682 14.664 1.8232 14.8484C2.07232 15.4498 2.55017 15.9277 3.1516 16.1768C3.33601 16.2532 3.57753 16.3061 3.99228 16.3344C4.41437 16.3632 4.95362 16.3636 5.72727 16.3636H9C9.77367 16.3636 10.3129 16.3632 10.735 16.3344C11.1498 16.3061 11.3913 16.2532 11.5757 16.1768C12.1771 15.9277 12.655 15.4498 12.904 14.8484C12.9805 14.664 13.0334 14.4225 13.0617 14.0078C13.0905 13.5857 13.0909 13.0464 13.0909 12.2727C13.0909 11.4991 13.0905 10.9598 13.0617 10.5377C13.0334 10.123 12.9805 9.88143 12.904 9.69701C12.655 9.09565 12.1771 8.61775 11.5757 8.36869C11.3913 8.29227 11.1498 8.23934 10.735 8.21103C10.3129 8.18223 9.77367 8.18182 9 8.18182H5.72727C4.95362 8.18182 4.41437 8.18223 3.99228 8.21103ZM7.36364 10.6364C7.81552 10.6364 8.18182 11.0027 8.18182 11.4545V13.0909C8.18182 13.5428 7.81552 13.9091 7.36364 13.9091C6.91175 13.9091 6.54545 13.5428 6.54545 13.0909V11.4545C6.54545 11.0027 6.91175 10.6364 7.36364 10.6364Z" fill="currentColor"/></svg></div>
+    <div class="hdt-icon-box-content">
+      <h2 class="hdt-heading hdt-text-lg">Responsiveness</h2>
+      <div class="hdt-text-base hdt-s-text rte"><p>Local offices mean we can answer across time zones — not from a distant catalog.</p></div>
+    </div>
+  </div>
+</div><div class="hdt-icon-item hdt-slider__slide">
+  <div class="hdt-icon-item-inner hdt-icon--pos-top hdt-text-center md:hdt-text-center">
+    <div class="hdt-icon-wrap hdt-icon__type-cricle" style="--icon-h-md: 18px;--icon-h: 18px"><svg aria-hidden="true" focusable="false" width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.6302 14.3838C13.5324 14.3946 13.4338 14.4 13.3333 14.4H11.5556C11.3198 14.4 11.0937 14.3052 10.927 14.1364C10.7603 13.9676 10.6667 13.7387 10.6667 13.5V8.1C10.6667 7.8613 10.7603 7.63239 10.927 7.4636C11.0937 7.29482 11.3198 7.2 11.5556 7.2H14.1591C13.7271 4.1481 11.1324 1.8 8 1.8C4.86756 1.8 2.27289 4.1481 1.84089 7.2H4.44444C4.68019 7.2 4.90628 7.29482 5.07298 7.4636C5.23968 7.63239 5.33333 7.8613 5.33333 8.1V13.5C5.33333 13.7387 5.23968 13.9676 5.07298 14.1364C4.90628 14.3052 4.68019 14.4 4.44444 14.4H2.66667C1.95942 14.4 1.28115 14.1155 0.781049 13.6092C0.280952 13.1028 0 12.4161 0 11.7V8.1C0 3.6297 3.58489 0 8 0C12.4151 0 16 3.6297 16 8.1V11.718C15.9984 12.8645 15.7559 13.9975 15.2886 15.0418C14.8214 16.0861 14.14 17.0178 13.2898 17.775C13.1271 17.9199 12.9182 18 12.7013 18H8C7.76425 18 7.53816 17.9052 7.37146 17.7364C7.20476 17.5676 7.11111 17.3387 7.11111 17.1C7.11111 16.8613 7.20476 16.6324 7.37146 16.4636C7.53816 16.2948 7.76425 16.2 8 16.2L12.3529 16.1991C12.8817 15.6755 13.3142 15.0608 13.6302 14.3838Z" fill="currentColor"/></svg></div>
+    <div class="hdt-icon-box-content">
+      <h2 class="hdt-heading hdt-text-lg">Partnership</h2>
+      <div class="hdt-text-base hdt-s-text rte"><p>We sit between manufacturer and provider so both sides can scale with confidence.</p></div>
+    </div>
+  </div>
+</div><div class="hdt-icon-item hdt-slider__slide">
+  <div class="hdt-icon-item-inner hdt-icon--pos-top hdt-text-center md:hdt-text-center">
+    <div class="hdt-icon-wrap hdt-icon__type-cricle" style="--icon-h-md: 18px;--icon-h: 18px"><svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.1274 0H4.8726C4.15657 0.000152921 3.46993 0.284717 2.9637 0.7911L0.7911 2.9637C0.284717 3.46993 0.000152921 4.15657 0 4.8726V15.3C0 16.0161 0.284464 16.7028 0.790812 17.2092C1.29716 17.7155 1.98392 18 2.7 18H15.3C16.0161 18 16.7028 17.7155 17.2092 17.2092C17.7155 16.7028 18 16.0161 18 15.3V4.8726C17.9998 4.15657 17.7153 3.46993 17.2089 2.9637L15.0363 0.7911C14.5301 0.284717 13.8434 0.000152921 13.1274 0ZM15.3 3.6L13.7637 2.0637C13.595 1.89491 13.3661 1.80005 13.1274 1.8H4.8726C4.63392 1.80005 4.40504 1.89491 4.2363 2.0637L2.7 3.6H15.3ZM1.8 6.3V15.3C1.8 15.5387 1.89482 15.7676 2.0636 15.9364C2.23239 16.1052 2.46131 16.2 2.7 16.2H15.3C15.5387 16.2 15.7676 16.1052 15.9364 15.9364C16.1052 15.7676 16.2 15.5387 16.2 15.3V6.3C16.2 6.06131 16.1052 5.83239 15.9364 5.6636C15.7676 5.49482 15.5387 5.4 15.3 5.4H2.7C2.46131 5.4 2.23239 5.49482 2.0636 5.6636C1.89482 5.83239 1.8 6.06131 1.8 6.3ZM11.7 7.2C11.4613 7.2 11.2324 7.29482 11.0636 7.4636C10.8948 7.63239 10.8 7.8613 10.8 8.1V9.9C10.8 10.1387 10.8948 10.3676 11.0636 10.5364C11.2324 10.7052 11.4613 10.8 11.7 10.8H13.5C13.7387 10.8 13.9676 10.7052 14.1364 10.5364C14.3052 10.3676 14.4 10.1387 14.4 9.9V8.1C14.4 7.8613 14.3052 7.63239 14.1364 7.4636C13.9676 7.29482 13.7387 7.2 13.5 7.2H11.7ZM10.8 12.6C10.8 12.3613 10.8948 12.1324 11.0636 11.9636C11.2324 11.7948 11.4613 11.7 11.7 11.7H13.5C13.7387 11.7 13.9676 11.7948 14.1364 11.9636C14.3052 12.1324 14.4 12.3613 14.4 12.6C14.4 12.8387 14.3052 13.0676 14.1364 13.2364C13.9676 13.4052 13.7387 13.5 13.5 13.5H11.7C11.4613 13.5 11.2324 13.4052 11.0636 13.2364C10.8948 13.0676 10.8 12.8387 10.8 12.6Z" fill="currentColor"/></svg></div>
+    <div class="hdt-icon-box-content">
+      <h2 class="hdt-heading hdt-text-lg">Compliance</h2>
+      <div class="hdt-text-base hdt-s-text rte"><p>Labeling, documentation, and market rules are part of the work — not an afterthought.</p></div>
+    </div>
+  </div>
+</div></div>
+        </div>
+      </hdt-slider>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="impact" class="shopify-section hdt-section">
+  <div color-scheme="scheme-4" class="mg-impact hdt-section-spacing hdt-s-gradient" style="--section-pt: 60px; --section-pb: 60px; --section-pt-xl: 96px; --section-pb-xl: 96px">
+    <div class="hdt-container">
+      <div class="mg-impact__grid">
+        <div class="mg-impact__statement">
+          <div class="hdt-theme-block hdt-label-emoij hdt-font-medium hdt-text-lg">Beyond trade</div>
+          <h2 class="hdt-theme-block hdt-heading-block hdt-h1 hdt-heading">Our responsibility travels too.</h2>
+          <div class="hdt-theme-block hdt-text-block rte hdt-s-text hdt-text-xl">
+            <p>Healthcare reaches further when companies invest in the communities around it. MedGlobe supports people and organizations doing meaningful work — because being a good partner should extend beyond a shipment.</p>
+          </div>
+        </div>
+        <div class="mg-impact__stories" aria-label="Community impact examples">
+          <article class="mg-impact__story">
+            <p class="mg-impact__eyebrow">Thailand</p>
+            <h3 class="hdt-heading hdt-h3">Supporting culture and community</h3>
+            <p>MedGlobe helped sponsor a cultural event in Thailand, contributing to a gathering with local and international reach.</p>
+          </article>
+          <article class="mg-impact__story">
+            <p class="mg-impact__eyebrow">Malaysia</p>
+            <h3 class="hdt-heading hdt-h3">Running for a patient-led cause</h3>
+            <p>Alongside a 5K supporting a cervical-cancer nonprofit founded by a survivor, MedGlobe contributed $3,000 to its work.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="presence" class="shopify-section hdt-section">
+  <div color-scheme="scheme-2" class="mg-presence hdt-section-spacing hdt-s-gradient" style="--section-pt: 60px; --section-pb: 60px; --section-pt-xl: 88px; --section-pb-xl: 88px">
+    <div class="hdt-container">
+      <div class="mg-presence__intro">
+        <div class="hdt-theme-block hdt-label-emoij hdt-font-medium hdt-text-lg">Presence</div>
+        <h2 class="hdt-theme-block hdt-heading-block hdt-h2 hdt-heading">Local knowledge, connected worldwide.</h2>
+        <div class="hdt-theme-block hdt-text-block rte hdt-s-text hdt-text-xl"><p>Our partners work with people who understand their market, language, and path to care. We show our reach by city — never by street address.</p></div>
+      </div>
+      <div class="mg-presence__map" role="img" aria-label="MedGlobe presence in New York, Tokyo, and Bangkok">
+        <img src="images/medglobe/world-map.svg" alt="" width="1200" height="608" loading="eager">
+        <span class="mg-map-pin mg-map-pin--new-york"><i aria-hidden="true"></i><b>New York</b></span>
+        <span class="mg-map-pin mg-map-pin--tokyo"><i aria-hidden="true"></i><b>Tokyo</b></span>
+        <span class="mg-map-pin mg-map-pin--bangkok"><i aria-hidden="true"></i><b>Bangkok</b></span>
+      </div>
+      <div class="mg-presence__footer">
+        <p>Additional offices planned for China and Turkey in 2026.</p>
+        <a class="hdt-link hdt-font-semibold" href="#contact">Start a conversation <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="shopify-section hdt-section">
+  <div color-scheme="scheme-1" class="hdt-section__contact hdt-section-spacing hdt-s-gradient" style="--section-pt: 60px; --section-pb: 60px; --section-pt-xl: 88px; --section-pb-xl: 88px">
+    <div class="hdt-container">
+      <div class="hdt-contact-form-wrap hdt-contact-form--two-cols">
+        <div class="hdt-section-title hdt-section-header--contact hdt-text-left">
+          <div class="hdt-inner-section-title" style="--title-custom-width: 540px">
+            <h2 class="hdt-theme-block hdt-heading-block hdt-h2 hdt-heading">Contact the team</h2>
+            <div class="hdt-spacer-block" style="--space: 20px; --space-md: 20px; --space-xl: 30px;"></div>
+            <div class="hdt-theme-block hdt-text-block rte hdt-s-text hdt-text-xl"><p>Reach out with your questions. We will respond as soon as possible.</p></div>
+            <div class="hdt-spacer-block" style="--space: 26px; --space-md: 26px; --space-xl: 45px;"></div>
+            <div class="hdt-theme-block hdt-theme-block--icon-with-text hdt-s-text hdt-text-base">
+              <div class="hdt-iwt--wrap">
+                <div class="hdt-iwi--icon" style="--icon-h-md: 54px;--icon-h: 40px"><svg aria-hidden="true" focusable="false" width="17" height="20" viewBox="0 0 17 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.01231 4.2993C5.96496 4.2993 4.2993 5.96496 4.2993 8.01231C4.2993 10.0596 5.96496 11.7253 8.01231 11.7253C10.0596 11.7253 11.7253 10.0596 11.7253 8.01231C11.7253 5.96496 10.0597 4.2993 8.01231 4.2993ZM8.01231 10.162C6.82699 10.162 5.86266 9.19762 5.86266 8.01231C5.86266 6.82699 6.82699 5.86266 8.01231 5.86266C9.19762 5.86266 10.162 6.82699 10.162 8.01231C10.162 9.19762 9.19762 10.162 8.01231 10.162Z" fill="currentColor"/><path d="M8.01231 0C3.5943 0 0 3.59434 0 8.01231V8.23379C0 10.4682 1.28102 13.0719 3.80758 15.9726C5.63914 18.0754 7.44512 19.5416 7.52105 19.603L8.01231 20L8.50355 19.6031C8.57953 19.5417 10.3855 18.0754 12.217 15.9726C14.7436 13.0719 16.0246 10.4682 16.0246 8.23383V8.01234C16.0246 3.59434 12.4303 0 8.01231 0ZM14.4612 8.23383C14.4612 12.0098 9.59598 16.5807 8.01231 17.9683C6.4282 16.5803 1.56336 12.0095 1.56336 8.23383V8.01234C1.56336 4.45641 4.45637 1.5634 8.01231 1.5634C11.5682 1.5634 14.4612 4.45641 14.4612 8.01234V8.23383Z" fill="currentColor"/></svg></div>
+                <div class="hdt-iwt--text rte"><p><strong>Presence</strong><br>New York · Tokyo · Bangkok<br>China and Turkey, 2026</p></div>
+              </div>
+            </div>
+            <div class="hdt-theme-block hdt-theme-block--icon-with-text hdt-s-text hdt-text-base">
+              <div class="hdt-iwt--wrap">
+                <div class="hdt-iwi--icon" style="--icon-h-md: 54px;--icon-h: 40px"><svg aria-hidden="true" focusable="false" width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.5248 16H4.75248C2.13196 16 0 13.868 0 11.2475V4.75248C0 2.13196 2.13196 0 4.75248 0H15.5248C18.1453 0 20.2772 2.13196 20.2772 4.75248V11.2475C20.2772 13.868 18.1453 16 15.5248 16ZM4.75248 1.58416C3.00547 1.58416 1.58416 3.00547 1.58416 4.75248V11.2475C1.58416 12.9945 3.00547 14.4158 4.75248 14.4158H15.5248C17.2718 14.4158 18.6931 12.9945 18.6931 11.2475V4.75248C18.6931 3.00547 17.2718 1.58416 15.5248 1.58416H4.75248ZM13.041 9.40222L16.9561 6.41164C17.3037 6.1461 17.3703 5.64903 17.1047 5.30139C16.8391 4.95374 16.3421 4.88721 15.9945 5.15275L12.0799 8.14297C10.9495 9.00511 9.37097 9.00574 8.23988 8.14515L4.44657 5.19644C4.10119 4.92792 3.60352 4.9903 3.33509 5.33568C3.06661 5.68107 3.12895 6.17869 3.47434 6.44717L7.27058 9.39814L7.27636 9.40257C8.12483 10.0497 9.14147 10.3732 10.1583 10.3732C11.1752 10.3732 12.1923 10.0495 13.041 9.40222Z" fill="currentColor"/></svg></div>
+                <div class="hdt-iwt--text rte"><p><strong>Reach us directly</strong><br><a href="mailto:info@medglobeusa.com">info@medglobeusa.com</a></p></div>
+              </div>
+            </div>
+            <div class="hdt-theme-block hdt-theme-block--icon-with-text hdt-s-text hdt-text-base">
+              <div class="hdt-iwt--wrap">
+                <div class="hdt-iwi--icon" style="--icon-h-md: 54px;--icon-h: 40px"><svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.746 13.0945C17.1691 12.6429 16.2425 12.0398 15.8588 11.8425C15.0424 11.4179 13.9056 11.4754 13.1556 11.9797L13.147 11.9855C12.6716 12.3168 12.2311 12.6954 11.8321 13.1156L11.8215 13.1265C11.7437 13.2092 11.6389 13.2615 11.526 13.274C11.4131 13.2864 11.2995 13.2582 11.2055 13.1945C10.3428 12.6067 9.53784 11.9384 8.80149 11.1984C8.06154 10.4623 7.39327 9.65749 6.80569 8.79487C6.74193 8.70114 6.71367 8.58776 6.72599 8.47507C6.7383 8.36238 6.79038 8.25778 6.87288 8.18003L6.8846 8.16831C7.30482 7.76938 7.68347 7.32884 8.01473 6.85346L8.02059 6.84487C8.52491 6.09486 8.58234 4.95814 8.15849 4.14368C7.95926 3.75852 7.35728 2.83196 6.90569 2.255C6.4631 1.66906 5.73064 0.859683 5.41852 0.580385C4.72669 -0.043055 3.59968 -0.183681 2.79652 0.253431L2.78675 0.258899C2.28961 0.542105 1.8235 0.876615 1.39606 1.25695L1.35231 1.29601C0.520634 2.01711 0.0545965 3.10813 0.00459416 4.45306C-0.0504865 5.93314 0.39055 7.67299 1.28278 9.48433C2.1961 11.3406 3.54382 13.1855 5.18022 14.8191C6.81663 16.4527 8.65968 17.8039 10.516 18.7172C12.227 19.559 13.874 20 15.2991 20C15.3827 20 15.4655 19.9984 15.5475 19.9953C16.8925 19.9453 17.9836 19.4797 18.7039 18.6476L18.743 18.6039C19.1234 18.1765 19.4579 17.7104 19.7411 17.2133L19.7465 17.2035C20.1833 16.4012 20.0434 15.275 19.4211 14.5832C19.1414 14.2695 18.3324 13.5371 17.746 13.0945ZM18.4453 16.4894C18.2153 16.8931 17.9429 17.2712 17.6328 17.6172L17.5863 17.6687C17.1359 18.1922 16.4315 18.475 15.4924 18.5101C14.2756 18.5547 12.7403 18.1566 11.1723 17.3848C9.46089 16.543 7.75261 15.2929 6.23105 13.7691C4.7095 12.2453 3.4571 10.5402 2.61722 8.82808C1.84335 7.2601 1.44529 5.72572 1.48826 4.50814C1.52341 3.57063 1.80624 2.86477 2.3297 2.41438L2.38283 2.36789C2.72939 2.05777 3.10798 1.7854 3.51218 1.55539C3.77118 1.4175 4.19659 1.47726 4.42785 1.68469C4.65911 1.89211 5.31851 2.61711 5.724 3.15422L5.73298 3.16516C6.14941 3.69641 6.69123 4.53861 6.84046 4.82728C7.01351 5.1597 6.99007 5.71244 6.79085 6.01244C6.51774 6.40515 6.20473 6.76854 5.85682 7.09682L5.85135 7.10229C5.51289 7.42195 5.29945 7.85178 5.24933 8.31461C5.19922 8.77745 5.31571 9.24299 5.5779 9.62769C6.21866 10.5681 6.94722 11.4456 7.75378 12.2484C8.55651 13.055 9.43406 13.7836 10.3746 14.4242C10.7595 14.6861 11.2252 14.8023 11.6881 14.7518C12.151 14.7013 12.5807 14.4875 12.9001 14.1488L12.9064 14.1426C13.2345 13.795 13.5977 13.4823 13.99 13.2093C14.29 13.0101 14.8428 12.9867 15.1772 13.1609C15.4639 13.309 16.3061 13.8511 16.8374 14.2676L16.8483 14.2761C17.387 14.682 18.1113 15.3429 18.3179 15.5738V15.5758C18.5242 15.8051 18.5832 16.2305 18.4453 16.4894Z" fill="currentColor"/></svg></div>
+                <div class="hdt-iwt--text rte"><p><strong>Give us a call</strong><br><a href="tel:+16467852774">(646) 785-2774</a></p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hdt-form-wrap hdt-form-wrap--contact">
+          <span class="sr-only">Contact form</span>
+          <form method="post" action="#contact" id="ContactForm" class="hdt-form hdt-form--move-text" data-demo-form>
+            <div class="hdt-form-row hdt-row-grid md:hdt-grid-cols-2 hdt-grid-cols-1">
+              <div class="hdt-field">
+                <input required aria-required="true" class="hdt-field__input hdt-input" autocomplete="name" type="text" id="ContactForm-name" name="contact[name]" value="" placeholder="Name *">
+                <label class="hdt-field__label sr-only" for="ContactForm-name"><span class="hdt-truncate">Name *</span></label>
+              </div>
+              <div class="hdt-field">
+                <input required autocomplete="email" type="email" id="ContactForm-email" class="hdt-field__input hdt-input" name="contact[email]" spellcheck="false" autocapitalize="off" value="" aria-required="true" placeholder="Email *">
+                <label class="hdt-field__label sr-only" for="ContactForm-email"><span class="hdt-truncate">Email *</span></label>
+              </div>
+            </div>
+            <div class="hdt-field">
+              <textarea rows="10" id="ContactForm-body" class="hdt-textarea" name="contact[body]" placeholder="Your message here..." required aria-required="true"></textarea>
+            </div>
+            <div class="hdt-contact__button hdt-text-center">
+              <button circle-bg-wrap type="submit" class="hdt-btn hdt-btn-solid hdt-btn--size-l hdt-btn-full-width hdt-btn--with-icon">Send message<svg class="hdt-icon--45rtl" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="12" cy="12" r="12" fill="currentColor"/>
+  <path d="M8 14.4167C8 14.5917 8.05833 14.7083 8.175 14.825C8.40833 15.0583 8.75833 15.0583 8.99167 14.825L14.825 8.99167C15.0583 8.75833 15.0583 8.40833 14.825 8.175C14.5917 7.94167 14.2417 7.94167 14.0083 8.175L8.175 14.0083C8.05833 14.125 8 14.2417 8 14.4167Z" fill="var(--color-icon-btn)"/>
+  <path d="M8.58333 8.58333C8.58333 8.93333 8.81667 9.16667 9.16667 9.16667L13.8333 9.16667V13.8333C13.8333 14.1833 14.0667 14.4167 14.4167 14.4167C14.7667 14.4167 15 14.1833 15 13.8333V8.58333C15 8.23333 14.7667 8 14.4167 8L9.16667 8C8.81667 8 8.58333 8.23333 8.58333 8.58333Z" fill="var(--color-icon-btn)"/>
+</svg><hdt-circle-bg mousemove></hdt-circle-bg></button>
+            </div>
+            <p class="mg-form-status hdt-text-sm" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  (() => {
+    const form = document.querySelector("[data-demo-form]");
+    const status = form?.querySelector(".mg-form-status");
+    if (!form || !status) return;
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+      status.textContent = "Thank you — your message is ready. The Shopify form endpoint will be connected before launch.";
+      form.reset();
+    });
+  })();
+</script>
+
+</main>
+
+<footer id="shopify-section-footer" class="shopify-section shopify-section-group-footer-group hdt-section hdt-section-footer">
+  <div color-scheme="scheme-4" class="mg-footer hdt-s-gradient">
+    <div class="hdt-container">
+      <div class="mg-footer__top">
+        <a href="#top" class="mg-footer__logo" aria-label="MedGlobe, back to top">
+          <img src="images/medglobe/logo.webp" alt="MedGlobe" width="72" height="33" loading="lazy">
+        </a>
+        <nav class="mg-footer__nav" aria-label="Footer">
+          <a href="#about">About</a>
+          <a href="#what-we-do">What we do</a>
+          <a href="#presence">Presence</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="mg-footer__contact">
+          <a href="mailto:info@medglobeusa.com">info@medglobeusa.com</a>
+          <span class="mg-footer__sep" aria-hidden="true">·</span>
+          <a href="tel:+16467852774">(646) 785-2774</a>
+        </div>
+      </div>
+      <div class="mg-footer__bottom">
+        <p class="mg-footer__tagline">Selective healthcare partnerships, guided by local expertise and connected worldwide.</p>
+        <small class="mg-footer__copy">&copy; 2026 MedGlobe</small>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
