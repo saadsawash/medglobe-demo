@@ -153,7 +153,7 @@ Sending five Shopify demo links did not work. Evren and Esra could not see the d
 
 **Next meeting**
 
-1. Agency picks **three** themes (candidates already in play: **Motto** and **Atora**).
+1. Agency picks **three** themes (Athora is demo 1 in this repo; two more TBD).
 2. Explain differences in plain language (“explain like I’m five”): menus, logo placement, image transitions, what suits a **text-led company page** vs a picture-heavy catalog.
 3. Spell out **what can change vs what cannot** (fonts, colors, buttons, cart/account chrome). A locked cart icon in the header could be a deal-breaker.
 4. Include prices (~$300 one-time was mentioned for the Shopify theme they were looking at).
@@ -180,28 +180,124 @@ Still coming from them: advocacy example links, hero image shortlist, the select
 
 ---
 
-## Three theme demos (next meeting)
+## Demo build status (August 2026)
 
-Each Shopify demo lives in its own folder (`athora/` is the active build; a second and third theme TBD). Briefs, transcripts, and the current-site scrape stay at the repo root.
+Snapshot of what exists in this repo today. Client brief above is unchanged; this section tracks **implementation only**.
 
-Enough to build **homepage demos** this week: IA, constraints, current-site copy, manufacturer product facts, and Athora as the working demo. Hide shop / search / cart / account / language. One scrolling company page, logo + catchphrase + old-site copy, city-only map, name/email/message form.
+### Repository
 
-Not in hand yet (placeholders are fine; they will react to structure):
+| Item | Detail |
+|---|---|
+| GitHub | [github.com/saadsawash/medglobe-demo](https://github.com/saadsawash/medglobe-demo) (public) |
+| Branch | `main` |
+| Local path | `demo-1/` |
 
-- Logo hex values and real photography
-- Themes 2 and 3 (second and third Shopify base themes)
-- Catchphrase line for selectivity
-- Product-page content if you also start Steadiwear / Yeshim
+### Folder layout
 
-They asked you to walk three themes live and say what can vs cannot change. Do not expect a decision from an email of raw Shopify demos.
+```
+demo-1/
+├── athora/              ← active Shopify theme export (MedGlobe homepage)
+│   ├── index.html       ← single-page company demo
+│   ├── css/medglobe.css ← all MedGlobe overrides
+│   ├── images/medglobe/ ← logos, hero, bento photos, world map
+│   └── original.html    ← untouched Athora reference export
+├── _transcripts/        ← formatted client meetings + current-site scrape
+└── summary.md           ← this file
+```
+
+**Removed:** `motto/` theme folder (discarded; not part of the demo).
+
+### Preview locally
+
+From the repo root:
+
+```bash
+python3 -m http.server 8766
+```
+
+Open [http://127.0.0.1:8766/athora/index.html](http://127.0.0.1:8766/athora/index.html)
+
+Static HTML only — no Shopify backend. Contact form shows a demo success message; it does not send mail.
+
+### Theme base
+
+**Athora** (Shopify). Store chrome hidden: shop, search, cart, account, localization, announcement bar. English only.
+
+Custom styles live in `athora/css/medglobe.css`. Brand plum `rgb(86 60 73)`, cyan accent `rgb(42 168 200)`.
+
+### Homepage sections (scroll order)
+
+| Anchor | Section | Notes |
+|---|---|---|
+| `#top` | Hero | Plum overlay on clinical photo. H1: “Global Presence. Local Expertise.” Selectivity line in subcopy. |
+| — | Stats strip | 70+ years · 3 regions · 5 ways (static grid, not a carousel on desktop) |
+| `#about` | About media | Full-bleed image + “Experience across markets…” |
+| `#mission` | Why we choose | Patient-impact / selectivity narrative |
+| `#what-we-do` | Five ways | **Plum background.** Tangem-style bento photo cards (full-tile tap, expand overlay). Stock placeholders `way-01`–`way-05.webp`. |
+| `#focus` | Product focus | Three category cards (instruments, topicals, devices) |
+| `#values-intro` + icons | Values | Integrity, Quality, Responsiveness, Partnership, Compliance — quiet grid |
+| `#impact` | Advocacy preview | Plum section; Thailand + Malaysia stories (placeholder copy) |
+| `#presence` | Map | Wikimedia **BlankMap World simple** SVG, grayscale at 24% opacity. City pins: New York, Tokyo, Bangkok. Footer line: China + Turkey 2026. **No street addresses.** |
+| `#contact` | Contact | Name, email, message only. Side column lists cities + `info@medglobeusa.com` + phone. |
+| — | Footer | Dark plum inset capsule; centered nav + tagline |
+
+**Nav (header):** About · What we do · Presence · Contact. Mobile drawer matches.
+
+### Chrome (settled — do not revert without asking)
+
+- **Header:** Centered logo; nav split left/right on desktop. On scroll → compact dark-glass capsule; inline nav hides; logo stays visible (muted, full color on hover).
+- **Section rail:** Fixed bottom pill on scroll with scroll-spy (About · What we do · Presence · Contact).
+- **Footer:** Replaced Athora accordion footer with minimal centered capsule (`scheme-4`, rounded on all corners).
+
+### Bento cards (`#what-we-do`)
+
+- Five cards on plum (`scheme-4`); whole card is the click target.
+- Closed: title + teaser at bottom with gradient scrim for contrast.
+- Open: frosted plus → ×; dark overlay with longer copy.
+- Typography tuned (heading vs body sizes; white teaser, not gray-on-photo).
+
+**Map note:** Dot-matrix and 3D globe experiments were rejected. Current map is the simple flat silhouette the client preferred.
+
+### Assets in repo
+
+| File | Use |
+|---|---|
+| `logo.webp`, `logo-footer.webp` | Header + footer |
+| `hero.webp` | Hero slide |
+| `presence.webp` | About media block |
+| `way-01.webp` … `way-05.webp` | Bento card backgrounds |
+| `world-map.svg` | Presence map (BlankMap World simple) |
+
+### Not built yet
+
+- Themes 2 and 3 for the three-theme client walkthrough
+- Steadiwear / Yeshim product pages
+- Real client photography and final catchphrase
+- Shopify deployment (this is a static export demo)
+- Advocacy as a live menu item (content exists as `#impact` only)
+
+### Open (unchanged from brief)
+
+1. Final three themes, with a can/cannot-change list and prices.
+2. Exact catchphrase (global reach is on the page; selectivity line still being refined).
+3. Advocacy label and whether it ships in v1 or a week later.
+4. Which product page to start if hours remain (default: Steadiwear).
+5. Shopify account setup with Esra.
+6. Whether Japan / Thailand / NY street details stay in a private contact path or vanish entirely.
 
 ---
 
-## Open
+## Three theme demos (next meeting)
 
-1. Final three themes, with a can/cannot-change list and prices.
-2. Exact catchphrase (global reach is already on the old About page; selectivity still needs a line).
-3. Advocacy label and whether it ships in v1 or a week later.
-4. Which product page to start if hours remain (default: Steadiwear).
-5. Shopify account setup with Esra (flagged when tried from another country; finish outside the group call).
-6. Whether Japan / Thailand / NY street details stay in a private contact path or vanish entirely.
+Each Shopify demo lives in its own folder (`athora/` is demo 1; second and third theme TBD). Briefs, transcripts, and the current-site scrape stay at the repo root.
+
+The Athora homepage demo is **build-ready for walkthrough**: IA, hidden store chrome, rewritten narrative, bento services, city-only map, contact form, plum/light rhythm. See **Demo build status** above for section-by-section detail.
+
+Not in hand yet (placeholders are fine; they will react to structure):
+
+- Logo hex values and final client photography
+- Themes 2 and 3 (second and third Shopify base themes)
+- Final selectivity catchphrase line
+- Product-page content (Steadiwear / Yeshim)
+
+They asked you to walk three themes live and say what can vs cannot change. Do not expect a decision from an email of raw Shopify demos.
