@@ -1,0 +1,133 @@
+/* Patient stories - standalone file so styles cannot be dropped by a broken main sheet */
+
+.sw-stories {
+  padding: 3.5rem 1.2rem 6.5rem;
+  background: #f0eeea;
+}
+
+.sw-stories__intro {
+  max-width: 34rem;
+  margin: 0 auto 2.75rem;
+  text-align: center;
+}
+
+.sw-stories__heading {
+  margin: 0 0 0.65rem;
+  color: #1c1917;
+  font-size: clamp(1.85rem, 3.5vw, 2.6rem);
+  letter-spacing: -0.03em;
+  line-height: 1.12;
+  font-weight: 700;
+}
+
+.sw-stories__lead {
+  margin: 0;
+  color: #57534e;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.sw-stories__list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.75rem;
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+.sw-story {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  min-width: 0;
+}
+
+.sw-story__frame {
+  width: 100%;
+  aspect-ratio: 5 / 4;
+  min-height: 14rem;
+  border-radius: 1.35rem;
+  overflow: hidden;
+  background: #1c1917;
+  box-shadow:
+    0 0 0 1px rgb(28 25 23 / 8%),
+    0 22px 48px -24px rgb(28 25 23 / 35%);
+}
+
+.sw-story__frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 22%;
+}
+
+.sw-story__frame img.sw-story__img--wide {
+  object-position: center 45%;
+}
+
+.sw-story__body {
+  padding-inline: 0.15rem;
+}
+
+.sw-story__quote {
+  margin: 0;
+  color: #1c1917;
+  font-size: 1.08rem;
+  line-height: 1.55;
+  letter-spacing: -0.01em;
+}
+
+.sw-story__quote::before {
+  content: "";
+  display: block;
+  width: 1.75rem;
+  height: 0.2rem;
+  margin-bottom: 0.85rem;
+  border-radius: 999px;
+  background: #79bd1a;
+}
+
+.sw-story__person {
+  margin-top: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.sw-story__person strong {
+  color: #1c1917;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.sw-story__person span {
+  color: #57534e;
+  font-size: 0.8125rem;
+}
+
+@media (min-width: 768px) {
+  .sw-stories {
+    padding: 4.5rem 1.2rem 7rem;
+  }
+
+  .sw-stories__intro {
+    margin-bottom: 3.25rem;
+  }
+
+  .sw-stories__list {
+    max-width: 44rem;
+    gap: 3.25rem;
+  }
+
+  .sw-story__frame {
+    border-radius: 1.5rem;
+    aspect-ratio: 16 / 11;
+    min-height: 18rem;
+  }
+
+  .sw-story__quote {
+    font-size: 1.15rem;
+  }
+}

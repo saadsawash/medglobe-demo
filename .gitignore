@@ -3,3 +3,6 @@
 .env.*
 *.log
 .cursor/
+
+# Steadiwear source dump (large originals) — optimized copies live in steadiwear/images/
+_steadiwear-assets/
