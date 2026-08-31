@@ -202,7 +202,10 @@ Snapshot of what exists in this repo today. Client brief above is unchanged; thi
 │   └── original.html    ← untouched Athora reference export
 ├── corp-demo-2/ … corp-demo-4/
 ├── corp/                ← minimal hub linking corp demos
-├── steadiwear/          ← product page track
+├── steadiwear-product-demo-1/  ← Steadiwear product page demo 1
+├── steadiwear-product-demo-2/  ← Steadiwear specimen / object-first demo
+├── steadiwear-product-demo-3/  ← Steadiwear blueprint / engineering drawing demo
+├── steadiwear-product-demo-4/  ← Steadiwear scroll-companion product library
 ├── _transcripts/        ← formatted client meetings + current-site scrape
 └── summary.md           ← this file
 ```

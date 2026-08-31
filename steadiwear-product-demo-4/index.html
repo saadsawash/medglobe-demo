@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MedGlobe - steadiwear-product-demo-4</title>
+  <meta name="description" content="Steadi-3 Plus - a calm, usable product library with a living product stage.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Sora:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="back" href="../corp/index.html">All demos</a>
+
+  <header class="top">
+    <a class="top__brand" href="#top">
+      <img src="images/logo.png" width="120" height="36" alt="Steadiwear">
+    </a>
+    <nav class="top__nav" aria-label="Page">
+      <a href="#how">How it works</a>
+      <a href="#evidence">Evidence</a>
+      <a href="#stories">Stories</a>
+      <a href="#contact">Ask</a>
+    </nav>
+  </header>
+
+  <div class="progress" aria-hidden="true"><i></i></div>
+
+  <main id="top" class="layout">
+    <aside class="stage" aria-label="Product stage">
+      <div class="stage__glow" aria-hidden="true"></div>
+      <div class="stage__frame">
+        <img class="stage__img is-active" data-stage="intro" src="images/hero-glove.jpg" width="1200" height="900" alt="Steadi-3 Plus" fetchpriority="high">
+        <img class="stage__img" data-stage="how" src="images/glove-detail.jpg" width="1200" height="900" alt="Damper detail" loading="lazy">
+        <img class="stage__img" data-stage="facts" src="images/glove-straps.jpg" width="1200" height="900" alt="Fit and straps" loading="lazy">
+        <img class="stage__img" data-stage="evidence" src="images/glove-side.jpg" width="1200" height="900" alt="Steadi-3 Plus profile" loading="lazy">
+        <img class="stage__img" data-stage="stories" src="images/testimonial-betty.jpg" width="1000" height="1250" alt="Betty with Steadi-3 Plus" loading="lazy">
+        <img class="stage__img" data-stage="contact" src="images/glove-worn.jpg" width="1200" height="900" alt="Steadi-3 Plus in daily use" loading="lazy">
+      </div>
+      <div class="stage__caption">
+        <p class="stage__model">Steadi-3 Plus</p>
+        <p class="stage__line" data-stage-line>Battery-free tremor stabilization</p>
+      </div>
+      <div class="stage__dots" aria-hidden="true">
+        <span data-dot="intro" class="is-on"></span>
+        <span data-dot="how"></span>
+        <span data-dot="facts"></span>
+        <span data-dot="evidence"></span>
+        <span data-dot="stories"></span>
+        <span data-dot="contact"></span>
+      </div>
+    </aside>
+
+    <div class="story">
+      <section class="block block--hero" data-chapter="intro">
+        <p class="eyebrow" data-in>Product library</p>
+        <h1 data-in data-delay="1">A quieter hand.<br>A steadier day.</h1>
+        <p class="lead" data-in data-delay="2">Steadi-3 Plus is a wearable damper for essential tremor and Parkinson-related hand tremor. Explore the object, the science, and the proof - not a checkout.</p>
+        <div class="hero__actions" data-in data-delay="3">
+          <a class="btn btn--fill" href="#how">See how it works</a>
+          <a class="btn btn--ghost" href="#evidence">Read the evidence</a>
+        </div>
+        <ul class="hero__stats" data-in data-delay="4">
+          <li><strong data-count="84">0</strong><span>improved vs no device</span></li>
+          <li><strong data-count="70">0</strong><span>improved vs placebo</span></li>
+          <li><strong>~290g</strong><span>on the hand</span></li>
+        </ul>
+      </section>
+
+      <section class="block" id="how" data-chapter="how" data-scene>
+        <p class="eyebrow" data-in>How it works</p>
+        <h2 data-in data-delay="1">Counter-motion, not medication</h2>
+        <p data-in data-delay="2">A tuned mass damper sits on the back of the hand - the same idea used to quiet a tall building in an earthquake. It senses tremor frequency and answers with opposite motion.</p>
+        <ol class="steps">
+          <li data-in data-delay="1">
+            <span>01</span>
+            <div>
+              <strong>Sense</strong>
+              <p>The damper reads the tremor rhythm as you move through ordinary tasks.</p>
+            </div>
+          </li>
+          <li data-in data-delay="2">
+            <span>02</span>
+            <div>
+              <strong>Answer</strong>
+              <p>Counter-motion reduces the shake so cups, pens, and utensils stay nearer to where they belong.</p>
+            </div>
+          </li>
+          <li data-in data-delay="3">
+            <span>03</span>
+            <div>
+              <strong>Wear</strong>
+              <p>No battery. No overnight charge. Movement powers the response for a full day.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="block" id="facts" data-chapter="facts" data-scene>
+        <p class="eyebrow" data-in>The object</p>
+        <h2 data-in data-delay="1">Built to disappear into a day</h2>
+        <div class="chips">
+          <article data-in data-delay="0"><strong>Battery-free</strong><p>Nothing to plug in. Nothing to remember at night.</p></article>
+          <article data-in data-delay="1"><strong>Left or right</strong><p>Universal adjustable sizing for the hand that needs it.</p></article>
+          <article data-in data-delay="2"><strong>~290 g</strong><p>Light enough for writing, eating, cooking, and work.</p></article>
+          <article data-in data-delay="3"><strong>Class I</strong><p>FDA-registered for essential tremor and Parkinson-related hand tremor.</p></article>
+        </div>
+      </section>
+
+      <section class="block" id="evidence" data-chapter="evidence" data-scene>
+        <p class="eyebrow" data-in>Evidence</p>
+        <h2 data-in data-delay="1">Publications &amp; clinical research</h2>
+        <p data-in data-delay="2">Curated for clinicians, providers, and informed patients. Demo links are placeholders except the manufacturer validation study.</p>
+        <div class="proof" data-in data-delay="3">
+          <p><strong>84%</strong><span>improved tremor control vs no device</span></p>
+          <p><strong>70%</strong><span>improved vs placebo</span></p>
+        </div>
+        <ul class="pubs">
+          <li data-in>
+            <a href="https://steadiwear.com/pages/steadi-3-validation-study">
+              <span class="pubs__j">Steadiwear Validation Study</span>
+              <span class="pubs__t">Blinded neurologist assessments: Steadi-3 Plus vs no device and placebo</span>
+            </a>
+          </li>
+          <li data-in data-delay="1">
+            <a href="#publication-2">
+              <span class="pubs__j">Movement Disorders Clinical Practice</span>
+              <span class="pubs__t">Wearable tremor suppression in essential tremor: controlled evaluation outcomes</span>
+            </a>
+          </li>
+          <li data-in data-delay="2">
+            <a href="#publication-3">
+              <span class="pubs__j">Journal of NeuroEngineering and Rehabilitation</span>
+              <span class="pubs__t">Tuned mass damper wrist stabilization for pathological hand tremor</span>
+            </a>
+          </li>
+          <li data-in data-delay="3">
+            <a href="#publication-4">
+              <span class="pubs__j">Tremor and Other Hyperkinetic Movements</span>
+              <span class="pubs__t">Patient-reported functional gains during activities of daily living</span>
+            </a>
+          </li>
+          <li data-in data-delay="4">
+            <a href="#publication-5">
+              <span class="pubs__j">Assistive Technology</span>
+              <span class="pubs__t">Acceptability and adherence of non-invasive tremor devices in older adults</span>
+            </a>
+          </li>
+          <li data-in data-delay="4">
+            <a href="#publication-6">
+              <span class="pubs__j">Clinical Brief</span>
+              <span class="pubs__t">Physician overview: mechanism, indications, and fitting</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="block" id="stories" data-chapter="stories" data-scene>
+        <p class="eyebrow" data-in>Stories</p>
+        <h2 data-in data-delay="1">Independence you can wear</h2>
+        <blockquote data-in data-delay="2">
+          <p>A puzzle finished. A cup held. A day that feels like yours again.</p>
+          <cite>Betty - Steadi-3 Plus user</cite>
+        </blockquote>
+        <div class="faces">
+          <figure data-in data-delay="1">
+            <img src="images/testimonial-betty.jpg" width="400" height="500" alt="Betty" loading="lazy">
+            <figcaption>Betty</figcaption>
+          </figure>
+          <figure data-in data-delay="2">
+            <img src="images/testimonial-joel.jpg" width="400" height="500" alt="Joel" loading="lazy">
+            <figcaption>Joel</figcaption>
+          </figure>
+          <figure data-in data-delay="3">
+            <img src="images/testimonial-katherine.jpg" width="400" height="500" alt="Katherine" loading="lazy">
+            <figcaption>Katherine</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="block block--ask" id="contact" data-chapter="contact" data-scene>
+        <p class="eyebrow" data-in>Through MedGlobe</p>
+        <h2 data-in data-delay="1">Ask about Steadi-3 Plus</h2>
+        <p data-in data-delay="2">Name, email, message. Tell us whether you are a patient, caregiver, or provider - and which market.</p>
+        <form action="#" method="post" data-in data-delay="3">
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" autocomplete="name" required>
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" autocomplete="email" required>
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea name="message" required></textarea>
+          </label>
+          <button type="submit">Send</button>
+        </form>
+        <p class="fine" data-in data-delay="4">Distributed by MedGlobe. Manufactured by Steadiwear Inc.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="end">steadiwear-product-demo-4</footer>
+
+  <script src="motion.js" defer></script>
+</body>
+</html>

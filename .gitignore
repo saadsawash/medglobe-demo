@@ -4,5 +4,5 @@
 *.log
 .cursor/
 
-# Steadiwear source dump (large originals) — optimized copies live in steadiwear/images/
+# Steadiwear source dump (large originals) — optimized copies live in steadiwear-product-demo-1/images/
 _steadiwear-assets/

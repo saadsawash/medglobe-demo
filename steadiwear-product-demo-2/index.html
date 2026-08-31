@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MedGlobe - steadiwear-product-demo-2</title>
+  <meta name="description" content="Steadi-3 Plus - a product specimen page for tremor stabilization.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="back" href="../corp/index.html">All demos</a>
+
+  <header class="plinth" aria-label="Product">
+    <p class="plinth__mark" data-in>
+      <img src="images/logo.png" width="120" height="40" alt="Steadiwear">
+    </p>
+    <div class="plinth__stage" data-in data-delay="1">
+      <img src="images/hero-glove.jpg" width="1200" height="900" alt="Steadi-3 Plus tremor stabilization glove" fetchpriority="high">
+    </div>
+    <div class="plinth__meta" data-in data-delay="2">
+      <p class="plinth__model">Steadi-3 Plus</p>
+      <h1>The object that steadies a hand</h1>
+      <p class="plinth__sub">Battery-free tremor stabilization. Built to be worn, not charged. A product library - not a storefront.</p>
+    </div>
+  </header>
+
+  <section class="turn" aria-label="Product views" data-scene>
+    <div class="turn__copy">
+      <p class="kicker" data-in>Specimen views</p>
+      <h2 data-in data-delay="1">Turn it. Study it.</h2>
+      <p data-in data-delay="2">Every angle is the same idea: a quiet damper on the back of the hand, sized to disappear into a day.</p>
+      <div class="turn__controls" role="tablist" aria-label="Choose a view">
+        <button type="button" role="tab" aria-selected="true" data-view="0">Hero</button>
+        <button type="button" role="tab" aria-selected="false" data-view="1">Side</button>
+        <button type="button" role="tab" aria-selected="false" data-view="2">Straps</button>
+        <button type="button" role="tab" aria-selected="false" data-view="3">Worn</button>
+        <button type="button" role="tab" aria-selected="false" data-view="4">Detail</button>
+        <button type="button" role="tab" aria-selected="false" data-view="5">Desk</button>
+      </div>
+    </div>
+    <div class="turn__frame">
+      <figure class="turn__shot is-active" data-shot="0">
+        <img src="images/hero-glove.jpg" width="1200" height="900" alt="Steadi-3 Plus front view" loading="lazy">
+        <figcaption>Front</figcaption>
+      </figure>
+      <figure class="turn__shot" data-shot="1">
+        <img src="images/glove-side.jpg" width="1200" height="900" alt="Steadi-3 Plus side profile" loading="lazy">
+        <figcaption>Profile</figcaption>
+      </figure>
+      <figure class="turn__shot" data-shot="2">
+        <img src="images/glove-straps.jpg" width="1200" height="900" alt="Steadi-3 Plus adjustable straps" loading="lazy">
+        <figcaption>Fit</figcaption>
+      </figure>
+      <figure class="turn__shot" data-shot="3">
+        <img src="images/glove-worn.jpg" width="1200" height="900" alt="Steadi-3 Plus worn on a hand" loading="lazy">
+        <figcaption>On hand</figcaption>
+      </figure>
+      <figure class="turn__shot" data-shot="4">
+        <img src="images/glove-detail.jpg" width="1200" height="900" alt="Steadi-3 Plus damper detail" loading="lazy">
+        <figcaption>Damper</figcaption>
+      </figure>
+      <figure class="turn__shot" data-shot="5">
+        <img src="images/glove-desk.jpg" width="1200" height="900" alt="Steadi-3 Plus on a desk" loading="lazy">
+        <figcaption>At rest</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="facts" aria-label="Physical facts" data-scene>
+    <p class="kicker" data-in>Object facts</p>
+    <ul class="facts__grid">
+      <li data-in data-delay="0">
+        <strong>~290 g</strong>
+        <span>Light enough for a full day of writing, eating, cooking, and work.</span>
+      </li>
+      <li data-in data-delay="1">
+        <strong>No battery</strong>
+        <span>Movement powers the damper. Nothing to charge. Nothing to remember overnight.</span>
+      </li>
+      <li data-in data-delay="2">
+        <strong>Left or right</strong>
+        <span>Universal adjustable sizing. Choose the hand that needs steadiness.</span>
+      </li>
+      <li data-in data-delay="3">
+        <strong>Class I</strong>
+        <span>FDA-registered. Built for essential tremor and Parkinson-related hand tremor.</span>
+      </li>
+    </ul>
+  </section>
+
+  <section class="mech" aria-label="How it works" data-scene>
+    <div class="mech__visual">
+      <img src="images/glove-detail.jpg" width="1200" height="900" alt="" loading="lazy" data-in>
+    </div>
+    <div class="mech__copy">
+      <p class="kicker" data-in>Inside the object</p>
+      <h2 data-in data-delay="1">Counter-motion, not medication</h2>
+      <p data-in data-delay="2">A tuned mass damper - the same principle used to quiet a tall building in an earthquake - rides on the back of the hand. It senses tremor frequency and answers with opposite motion, so the cup, the pen, and the fork stay nearer to where they belong.</p>
+    </div>
+  </section>
+
+  <section class="proof" aria-label="Clinical outcomes" data-scene>
+    <p class="kicker" data-in>Measured quiet</p>
+    <div class="proof__row">
+      <div class="proof__stat" data-in data-delay="1">
+        <p class="proof__num">84%</p>
+        <p class="proof__label">improved tremor control vs no device, in blinded neurologist assessments</p>
+      </div>
+      <div class="proof__stat" data-in data-delay="2">
+        <p class="proof__num">70%</p>
+        <p class="proof__label">improved vs placebo under the same blinded rating</p>
+      </div>
+    </div>
+    <p class="proof__note" data-in data-delay="3">Numbers from Steadiwear clinical validation. This page is a library of what the product does - not a checkout.</p>
+  </section>
+
+  <section class="life" aria-label="In daily life" data-scene>
+    <figure class="life__shot" data-in>
+      <img src="images/testimonial-betty.jpg" width="1000" height="1250" alt="Betty using her hands with Steadi-3 Plus" loading="lazy">
+    </figure>
+    <blockquote class="life__quote" data-in data-delay="1">
+      <p>Independence you can wear - a puzzle finished, a cup held, a day that feels like yours again.</p>
+      <cite>Betty - Steadi-3 Plus user</cite>
+    </blockquote>
+  </section>
+
+  <section class="close" id="contact" aria-label="Next step" data-scene>
+    <p class="kicker" data-in>Through MedGlobe</p>
+    <h2 data-in data-delay="1">Ask about Steadi-3 Plus</h2>
+    <p data-in data-delay="2">Name, email, message. Tell us whether you are a patient, caregiver, or provider - and which market.</p>
+    <form action="#" method="post" data-in data-delay="3">
+      <input type="text" name="name" placeholder="Name" autocomplete="name" required>
+      <input type="email" name="email" placeholder="Email" autocomplete="email" required>
+      <textarea name="message" placeholder="Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <p class="close__fine" data-in data-delay="4">Distributed by MedGlobe. Manufactured by Steadiwear Inc.</p>
+  </section>
+
+  <footer class="end">Steadi-3 Plus - steadiwear-product-demo-2</footer>
+
+  <script src="motion.js" defer></script>
+</body>
+</html>
