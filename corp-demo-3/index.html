@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MedGlobe - corp-demo-3</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="back" href="../corp/index.html">All demos</a>
+  <div class="rail" aria-hidden="true"><i class="rail__fill"></i></div>
+
+  <header class="gate" aria-label="Welcome">
+    <div class="gate__media" aria-hidden="true">
+      <img src="images/hero.webp" width="1600" height="900" alt="" fetchpriority="high">
+    </div>
+    <div class="gate__veil" aria-hidden="true"></div>
+    <div class="gate__copy">
+      <p class="gate__brand" data-in>MedGlobe</p>
+      <p class="gate__line" data-in data-delay="1">Global Presence. Local Expertise.</p>
+      <p class="gate__sub" data-in data-delay="2">Selective international distribution for healthcare.</p>
+    </div>
+  </header>
+
+  <div class="board" aria-label="Where we work">
+    <div class="board__track">
+      <span>New York</span><span>Tokyo</span><span>Bangkok</span><span>China 2026</span><span>Turkey 2026</span>
+      <span>New York</span><span>Tokyo</span><span>Bangkok</span><span>China 2026</span><span>Turkey 2026</span>
+    </div>
+  </div>
+
+  <section class="signal" aria-label="Promise" data-scene>
+    <p data-in>We choose products for the difference they can make - then build the path to each market.</p>
+  </section>
+
+  <section class="pass pass--light" aria-label="Selectivity" data-scene>
+    <div class="pass__body">
+      <h2 data-in>Not everything that sells gets through</h2>
+      <p class="pass__text" data-in data-delay="1">MedGlobe is not a catalog of whatever could move. We look at the manufacturer, the evidence, the market need, and the people a product is meant to help - and we say no when it does not hold up.</p>
+    </div>
+  </section>
+
+  <section class="pass pass--photo" aria-label="Experience" data-scene>
+    <img class="pass__img" src="images/presence.webp" width="1200" height="800" alt="" loading="lazy">
+    <div class="pass__veil" aria-hidden="true"></div>
+    <div class="pass__body">
+      <h2 data-in>Questions before the border</h2>
+      <p class="pass__text" data-in data-delay="1">More than 70 years of combined experience across sourcing, market entry, distribution, and healthcare partnerships. That history is how we decide what deserves to cross.</p>
+    </div>
+  </section>
+
+  <section class="pass pass--deep" aria-label="Purpose" data-scene>
+    <div class="pass__body">
+      <h2 data-in>The point is the patient</h2>
+      <p class="pass__text" data-in data-delay="1">Trade matters. Volume does not lead. A product earns its place when it can help someone in a clinic, a pharmacy, a hospital, or a home - in the market where they live.</p>
+    </div>
+  </section>
+
+  <section class="carries" aria-label="What we do" data-scene>
+    <p class="carries__label" data-in>How we work</p>
+    <ul>
+      <li data-in data-delay="0">Distribution and commercialization</li>
+      <li data-in data-delay="1">Sourcing and vendor management</li>
+      <li data-in data-delay="2">Regulatory navigation</li>
+      <li data-in data-delay="3">Logistics and customs</li>
+      <li data-in data-delay="4">Private label and co-branding</li>
+    </ul>
+  </section>
+
+  <section class="desk" id="contact" aria-label="Contact" data-scene>
+    <h2 data-in>Write to us</h2>
+    <p data-in data-delay="1">Name, email, message. Tell us the product and the market.</p>
+    <form action="#" method="post" data-in data-delay="2">
+      <input type="text" name="name" placeholder="Name" autocomplete="name" required>
+      <input type="email" name="email" placeholder="Email" autocomplete="email" required>
+      <textarea name="message" placeholder="Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer class="end">MedGlobe - selective international distribution</footer>
+
+  <script src="motion.js" defer></script>
+</body>
+</html>

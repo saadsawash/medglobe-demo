@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MedGlobe - corp-demo-2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="back" href="../corp/index.html">All demos</a>
+
+  <div class="progress" aria-hidden="true"><i class="progress__bar"></i></div>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <section class="arrive" aria-label="Welcome">
+    <div class="arrive__media" aria-hidden="true">
+      <img src="images/hero.webp" width="1600" height="900" alt="" fetchpriority="high">
+    </div>
+    <div class="arrive__veil" aria-hidden="true"></div>
+    <div class="arrive__grain" aria-hidden="true"></div>
+    <h1 class="arrive__mark" data-reveal="hero" aria-label="MedGlobe">
+      <span class="arrive__letter" style="--i:0">M</span><span class="arrive__letter" style="--i:1">e</span><span class="arrive__letter" style="--i:2">d</span><span class="arrive__letter" style="--i:3">G</span><span class="arrive__letter" style="--i:4">l</span><span class="arrive__letter" style="--i:5">o</span><span class="arrive__letter" style="--i:6">b</span><span class="arrive__letter" style="--i:7">e</span>
+    </h1>
+    <p class="arrive__hint" data-reveal="hint">
+      <span class="arrive__hint-line"></span>
+      Scroll
+    </p>
+  </section>
+
+  <section class="said" aria-label="Catchphrase" data-scene data-tone="paper">
+    <p data-reveal>Global Presence.<br>Local Expertise.</p>
+  </section>
+
+  <section class="said said--dark" aria-label="Difference" data-scene data-tone="ink">
+    <p data-reveal>We do not import everything that sells.</p>
+  </section>
+
+  <section class="said said--soft" aria-label="Mission" data-scene data-tone="soft">
+    <p data-reveal>We choose healthcare products for the difference they can make - then build the right path to each market.</p>
+  </section>
+
+  <section class="folio" aria-label="About" data-scene data-tone="ink">
+    <img src="images/presence.webp" width="1200" height="800" alt="" loading="lazy" data-parallax>
+    <div class="folio__scrim" aria-hidden="true"></div>
+    <div class="folio__inner">
+      <h2 data-reveal>Experience across markets. Judgment at every step.</h2>
+      <p data-reveal data-reveal-delay="1">More than 70 years of combined experience across sourcing, market entry, distribution, and healthcare partnerships - used to ask better questions before a product ever crosses a border.</p>
+    </div>
+  </section>
+
+  <section class="said said--long" aria-label="Heal" data-scene data-tone="paper">
+    <p data-reveal>Patient impact before product volume.</p>
+  </section>
+
+  <section class="ways" aria-label="What we do" data-scene data-tone="paper">
+    <p class="ways__kicker" data-reveal>What we do</p>
+    <ul class="ways__list">
+      <li data-reveal data-reveal-delay="0"><span class="ways__n">01</span><span class="ways__t">Distribution &amp; commercialization</span></li>
+      <li data-reveal data-reveal-delay="1"><span class="ways__n">02</span><span class="ways__t">Sourcing &amp; vendor management</span></li>
+      <li data-reveal data-reveal-delay="2"><span class="ways__n">03</span><span class="ways__t">Regulatory navigation</span></li>
+      <li data-reveal data-reveal-delay="3"><span class="ways__n">04</span><span class="ways__t">Logistics &amp; customs</span></li>
+      <li data-reveal data-reveal-delay="4"><span class="ways__n">05</span><span class="ways__t">Private label &amp; co-branding</span></li>
+    </ul>
+  </section>
+
+  <section class="cities" aria-label="Presence" data-scene data-tone="warm">
+    <p data-reveal>Where we work</p>
+    <ul>
+      <li data-reveal data-reveal-delay="0">New York</li>
+      <li data-reveal data-reveal-delay="1">Tokyo</li>
+      <li data-reveal data-reveal-delay="2">Bangkok</li>
+      <li data-reveal data-reveal-delay="3">China - 2026</li>
+      <li data-reveal data-reveal-delay="4">Turkey - 2026</li>
+    </ul>
+  </section>
+
+  <section class="whisper" id="contact" aria-label="Contact" data-scene data-tone="ink">
+    <h2 data-reveal>Write to us</h2>
+    <p class="whisper__note" data-reveal data-reveal-delay="1">Name, email, message. That is all.</p>
+    <form action="#" method="post" data-reveal data-reveal-delay="2">
+      <input type="text" name="name" placeholder="Name" autocomplete="name" required>
+      <input type="email" name="email" placeholder="Email" autocomplete="email" required>
+      <textarea name="message" placeholder="Message" required></textarea>
+      <button type="submit">Send</button>
+      <p class="whisper__thanks" hidden>Thank you. We will reply soon.</p>
+    </form>
+  </section>
+
+  <footer class="end" data-reveal>MedGlobe - selective international distribution</footer>
+
+  <script src="motion.js" defer></script>
+</body>
+</html>

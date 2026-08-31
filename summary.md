@@ -190,17 +190,19 @@ Snapshot of what exists in this repo today. Client brief above is unchanged; thi
 |---|---|
 | GitHub | [github.com/saadsawash/medglobe-demo](https://github.com/saadsawash/medglobe-demo) (public) |
 | Branch | `main` |
-| Local path | `demo-1/` |
+| Local path | repo root |
 
 ### Folder layout
 
 ```
-demo-1/
-├── athora/              ← active Shopify theme export (MedGlobe homepage)
+├── corp-demo-1/         ← Athora Shopify theme export (corporate demo 1)
 │   ├── index.html       ← single-page company demo
 │   ├── css/medglobe.css ← all MedGlobe overrides
 │   ├── images/medglobe/ ← logos, hero, bento photos, world map
 │   └── original.html    ← untouched Athora reference export
+├── corp-demo-2/ … corp-demo-4/
+├── corp/                ← minimal hub linking corp demos
+├── steadiwear/          ← product page track
 ├── _transcripts/        ← formatted client meetings + current-site scrape
 └── summary.md           ← this file
 ```
@@ -215,7 +217,7 @@ From the repo root:
 python3 -m http.server 8766
 ```
 
-Open [http://127.0.0.1:8766/athora/index.html](http://127.0.0.1:8766/athora/index.html)
+Open [http://127.0.0.1:8767/corp/](http://127.0.0.1:8767/corp/) for the comparison hub
 
 Static HTML only — no Shopify backend. Contact form shows a demo success message; it does not send mail.
 
@@ -223,7 +225,7 @@ Static HTML only — no Shopify backend. Contact form shows a demo success messa
 
 **Athora** (Shopify). Store chrome hidden: shop, search, cart, account, localization, announcement bar. English only.
 
-Custom styles live in `athora/css/medglobe.css`. Brand plum `rgb(86 60 73)`, cyan accent `rgb(42 168 200)`.
+Custom styles for corp-demo-1 live in `corp-demo-1/css/medglobe.css`. corp-demo-2 through corp-demo-4 are standalone. Brand plum `rgb(86 60 73)`, cyan accent `rgb(42 168 200)`.
 
 ### Homepage sections (scroll order)
 
@@ -289,7 +291,7 @@ Custom styles live in `athora/css/medglobe.css`. Brand plum `rgb(86 60 73)`, cya
 
 ## Three theme demos (next meeting)
 
-Each Shopify demo lives in its own folder (`athora/` is demo 1; second and third theme TBD). Briefs, transcripts, and the current-site scrape stay at the repo root.
+Corporate demos: `corp-demo-1/` … `corp-demo-4/`; hub at `corp/`. Product demos will use a separate `product-demo-*` prefix later. Briefs, transcripts, and the current-site scrape stay at the repo root.
 
 The Athora homepage demo is **build-ready for walkthrough**: IA, hidden store chrome, rewritten narrative, bento services, city-only map, contact form, plum/light rhythm. See **Demo build status** above for section-by-section detail.
 
