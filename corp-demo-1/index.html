@@ -9,6 +9,9 @@
   <meta property="og:site_name" content="MedGlobe">
   <meta property="og:title" content="MedGlobe">
   <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/theme-vars.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/theme.css">
@@ -62,7 +65,7 @@
   <script type="module" src="js/global.js"></script>
   <script type="module" src="js/custom.js"></script>
 </head>
-<body id="top" class="hdt-page-type-index">
+<body id="top" class="hdt-page-type-index mg-sticky-left">
 <header id="shopify-section-header" class="shopify-section shopify-section-group-header-group hdt-section hdt-section-header-group hdt-section-header--main">
 <style>
 body:has(> main > .section-sp-transparent.hdt-section:first-child):not(:has(> .hdt-section-header--main + .shopify-section)) {
@@ -121,25 +124,37 @@ body:has(> main > .section-sp-transparent.hdt-section:first-child):not(:has(> .h
     <li><a class="mg-rail__link" href="#contact">Contact</a></li>
   </ul>
 </nav>
-<script>(()=>{const header=document.querySelector(".hdt-section-header--main");if(!header)return;const sticky=header.querySelector("hdt-sticky-header");const freezeHeight=()=>{if(header.classList.contains("mg-header-compact"))return;let extra=0;document.querySelectorAll(".shopify-section-group-header-group:not(header)").forEach(el=>{extra+=el.offsetHeight});header.style.setProperty("--header-group-height",`${extra}px`);if(sticky)sticky.style.height="";const height=(sticky?sticky.getBoundingClientRect().height:header.clientHeight)||0;if(sticky&&height>=40)sticky.style.height=`${height.toFixed(2)}px`;document.documentElement.style.setProperty("--mg-header-height",`${height.toFixed(2)}px`)};window.addEventListener("resize",freezeHeight);window.addEventListener("load",freezeHeight);freezeHeight();requestAnimationFrame(freezeHeight);document.querySelectorAll("#MenuDrawer a[href^='#']").forEach(link=>{link.addEventListener("click",()=>{document.getElementById("MenuDrawer")?.close()})});const prefersReduce=()=>window.matchMedia("(prefers-reduced-motion: reduce)").matches;document.querySelectorAll('a[href^="#"]').forEach(link=>{const id=link.getAttribute("href");if(!id||id==="#")return;link.addEventListener("click",event=>{const target=id==="#top"?document.body:document.querySelector(id);if(!target)return;event.preventDefault();if(id==="#top")window.scrollTo({top:0,behavior:prefersReduce()?"auto":"smooth"});else target.scrollIntoView({behavior:prefersReduce()?"auto":"smooth",block:"start"});if(location.hash!==id)history.pushState(null,"",id);document.getElementById("MenuDrawer")?.close()})});const syncCompact=()=>{const compact=window.scrollY>80;header.classList.toggle("mg-header-compact",compact);const rail=document.getElementById("mg-section-rail");if(rail){rail.classList.toggle("mg-rail--visible",compact);const links=[...rail.querySelectorAll('a[href^="#"]')];const line=Math.max(160,window.innerHeight*0.28);let active=null;links.forEach(link=>{const target=document.querySelector(link.getAttribute("href"));if(target&&target.getBoundingClientRect().top<=line)active=link});links.forEach(link=>{if(link===active)link.setAttribute("aria-current","true");else link.removeAttribute("aria-current")})}};window.addEventListener("scroll",syncCompact,{passive:true});window.addEventListener("resize",syncCompact);syncCompact()})();</script>
+<div class="mg-demo-kit" aria-label="Demo preview controls">
+  <div class="mg-header-switcher" id="mg-header-switcher" role="group" aria-label="Sticky header placement preview">
+    <span class="mg-header-switcher__label">Sticky</span>
+    <button type="button" class="mg-header-switcher__btn is-active" data-sticky="left" aria-pressed="true">Left</button>
+    <button type="button" class="mg-header-switcher__btn" data-sticky="right" aria-pressed="false">Right</button>
+  </div>
+  <div class="mg-header-switcher" id="mg-ribbon-switcher" role="group" aria-label="City ribbon scroll preview">
+    <span class="mg-header-switcher__label">Ribbon</span>
+    <button type="button" class="mg-header-switcher__btn is-active" data-ribbon="auto" aria-pressed="true">Auto</button>
+    <button type="button" class="mg-header-switcher__btn" data-ribbon="manual" aria-pressed="false">Manual</button>
+  </div>
+</div>
+<script>(()=>{const header=document.querySelector(".hdt-section-header--main");if(!header)return;const sticky=header.querySelector("hdt-sticky-header");const prefersReduce=()=>window.matchMedia("(prefers-reduced-motion: reduce)").matches;const freezeHeight=()=>{if(header.classList.contains("mg-header-compact"))return;let extra=0;document.querySelectorAll(".shopify-section-group-header-group:not(header)").forEach(el=>{extra+=el.offsetHeight});header.style.setProperty("--header-group-height",`${extra}px`);if(sticky)sticky.style.height="";const height=(sticky?sticky.getBoundingClientRect().height:header.clientHeight)||0;if(sticky&&height>=40)sticky.style.height=`${height.toFixed(2)}px`;document.documentElement.style.setProperty("--mg-header-height",`${height.toFixed(2)}px`)};window.addEventListener("resize",freezeHeight);window.addEventListener("load",freezeHeight);freezeHeight();requestAnimationFrame(freezeHeight);document.querySelectorAll("#MenuDrawer a[href^='#']").forEach(link=>{link.addEventListener("click",()=>{document.getElementById("MenuDrawer")?.close()})});document.querySelectorAll('a[href^="#"]').forEach(link=>{const id=link.getAttribute("href");if(!id||id==="#")return;link.addEventListener("click",event=>{const target=id==="#top"?document.body:document.querySelector(id);if(!target)return;event.preventDefault();if(id==="#top")window.scrollTo({top:0,behavior:prefersReduce()?"auto":"smooth"});else target.scrollIntoView({behavior:prefersReduce()?"auto":"smooth",block:"start"});if(location.hash!==id)history.pushState(null,"",id);document.getElementById("MenuDrawer")?.close()})});let compact=false;const playTeardrop=()=>{if(prefersReduce())return;header.classList.remove("mg-header-teardrop");void header.offsetWidth;header.classList.add("mg-header-teardrop");window.clearTimeout(playTeardrop._t);playTeardrop._t=window.setTimeout(()=>header.classList.remove("mg-header-teardrop"),760)};const syncCompact=()=>{const next=window.scrollY>80;if(next&&!compact){header.classList.add("mg-header-compact");playTeardrop()}else if(!next&&compact){header.classList.remove("mg-header-compact","mg-header-teardrop")}else if(next){header.classList.add("mg-header-compact")}else{header.classList.remove("mg-header-compact")}compact=next;const rail=document.getElementById("mg-section-rail");if(rail){rail.classList.toggle("mg-rail--visible",next);const links=[...rail.querySelectorAll('a[href^="#"]')];const line=Math.max(160,window.innerHeight*0.28);let active=null;links.forEach(link=>{const target=document.querySelector(link.getAttribute("href"));if(target&&target.getBoundingClientRect().top<=line)active=link});links.forEach(link=>{if(link===active)link.setAttribute("aria-current","true");else link.removeAttribute("aria-current")})}};window.addEventListener("scroll",syncCompact,{passive:true});window.addEventListener("resize",syncCompact);syncCompact();const switcher=document.getElementById("mg-header-switcher");const applyStickyVariant=variant=>{const isRight=variant==="right";document.body.classList.toggle("mg-sticky-left",!isRight);document.body.classList.toggle("mg-sticky-right",isRight);switcher?.querySelectorAll("[data-sticky]").forEach(btn=>{const active=btn.dataset.sticky===variant;btn.classList.toggle("is-active",active);btn.setAttribute("aria-pressed",String(active))});const url=new URL(window.location.href);if(isRight)url.searchParams.set("sticky","right");else url.searchParams.delete("sticky");history.replaceState(null,"",url);if(compact)playTeardrop()};const initialSticky=new URLSearchParams(window.location.search).get("sticky")==="right"?"right":"left";applyStickyVariant(initialSticky);switcher?.addEventListener("click",event=>{const btn=event.target.closest("[data-sticky]");if(!btn)return;applyStickyVariant(btn.dataset.sticky)})})();</script>
 
 <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
 
-<section id="shopify-section-slideshow" class="shopify-section hdt-section hdt-trigger-reinit section-sp-transparent">
+<section id="shopify-section-slideshow" class="shopify-section hdt-section hdt-trigger-reinit section-sp-transparent mg-hero-opening">
+  <div class="mg-hero-opening__stage">
   <div class="hdt-container-full">
-    <hdt-slideshow role="region" aria-label="MedGlobe introduction" type="slide" id="Slider-slideshow" class="hdt-slider hdt-slideshow hdt-relative" config='{ "autoHeight": true, "loop": false, "slidesToScroll": 1 }'>
+    <hdt-slideshow role="region" aria-label="MedGlobe introduction" type="slide" id="Slider-slideshow" class="hdt-slider hdt-slideshow hdt-relative" config='{ "autoHeight": false, "loop": false, "slidesToScroll": 1 }'>
       <div class="hdt-slider__viewport md:hdt-height--full hdt-height--fixed">
         <div class="hdt-slider__container">
           <div color-scheme="scheme-4" class="hdt-block hdt-slider__slide hdt-slideshow__slide">
-            <style>#Slider-slideshow { --aspect-ratioapt: 550px; }</style>
             <div class="hdt-media-overlap-content hdt-media-overlap-content--container" style="--overlap-content-mw: 670px; --color-overlay-opacity: 55%;">
               <picture class="hdt-media-wrapper">
                 <img src="images/medglobe/hero.webp" alt="A modern clinical environment prepared for patient care" width="1600" height="900" loading="eager" fetchpriority="high" sizes="100vw">
               </picture>
               <div class="hdt-media-content hdt-place-self-center hdt-text-center xl:hdt-place-self-center-start xl:hdt-text-start">
-                <div class="hdt-media-content-wrapp">
+                <div class="hdt-media-content-wrapp mg-hero-enter">
                   <div class="hdt-theme-block hdt-label-emoij hdt-font-medium hdt-text-lg">MedGlobe</div>
-                  <h1 class="hdt-theme-block hdt-heading-block hdt-h1 hdt-heading">Global Presence. Local Expertise.</h1>
+                  <h1 class="hdt-theme-block hdt-heading-block hdt-h1 hdt-heading">Global Presence. <span class="mg-hero-emphasis">Local Expertise.</span></h1>
                   <div class="hdt-theme-block hdt-text-block rte hdt-s-text hdt-text-xl"><p>We choose healthcare products for the difference they can make  -  then build the right path to each market.</p></div>
                   <div class="hdt-theme-block hdt-group-button-block hdt-flex-block hdt-flex-col" style="--gap-btns: 15px"><a class="hdt-btn hdt-btn--inner hdt-btn-solid hdt-btn--size-l hdt-btn--with-icon" href="#contact">
     <span circle-bg-wrap class="hdt-inner-btn">Get in Touch<svg class="hdt-icon--45rtl" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -156,49 +171,224 @@ body:has(> main > .section-sp-transparent.hdt-section:first-child):not(:has(> .h
       </div>
     </hdt-slideshow>
   </div>
-</section>
+  </div>
 
-<section id="shopify-section-stats" class="shopify-section hdt-section">
-  <div color-scheme="scheme-2" class="hdt-text--with-icon hdt-layout--card hdt-s-gradient hdt-section-spacing" style="--section-pt: 44px; --section-pb: 44px; --section-pt-xl: 56px; --section-pb-xl: 56px">
-    <div class="hdt-container-xl">
-      <div class="hdt-iconbox-wrap hdt-rounded">
-        <hdt-slider id="Slider-stats" data-blocks_size="3" data-odd="0" class="hdt-slider hdt-slider__active-false md:hdt-slider__active-false xl:hdt-slider__active-false hdt-slide-spacing-x xl:hdt-slides-3 md:hdt-slides-3 hdt-slides-1" config='{ "autoHeight": false, "active": false, "loop": false, "fade": false, "slidesToScroll": 1 }'>
-          <div class="hdt-slider__viewport">
-            <div class="hdt-slider__container hdt-flex-wrap hdt-justify-center">
-              <div class="hdt-icon-item hdt-slider__slide">
-                <div class="hdt-icon-item-inner hdt-icon--pos-top hdt-text-center md:hdt-text-center">
-                  <div class="hdt-icon-box-content">
-                    <p class="hdt-heading hdt-h2">70+</p>
-                    <h2 class="hdt-heading hdt-text-lg">Years of combined expertise</h2>
-                    <div class="hdt-text-base hdt-s-text rte"><p>Sourcing, distribution, and support for medical instruments, topicals, and devices.</p></div>
-                  </div>
-                </div>
-              </div>
-              <div class="hdt-icon-item hdt-slider__slide">
-                <div class="hdt-icon-item-inner hdt-icon--pos-top hdt-text-center md:hdt-text-center">
-                  <div class="hdt-icon-box-content">
-                    <p class="hdt-heading hdt-h2">3</p>
-                    <h2 class="hdt-heading hdt-text-lg">Regions worldwide</h2>
-                    <div class="hdt-text-base hdt-s-text rte"><p>Americas, Europe, and Asia-Pacific  -  local knowledge with a global footprint.</p></div>
-                  </div>
-                </div>
-              </div>
-              <div class="hdt-icon-item hdt-slider__slide">
-                <div class="hdt-icon-item-inner hdt-icon--pos-top hdt-text-center md:hdt-text-center">
-                  <div class="hdt-icon-box-content">
-                    <p class="hdt-heading hdt-h2">5</p>
-                    <h2 class="hdt-heading hdt-text-lg">Ways we go to market</h2>
-                    <div class="hdt-text-base hdt-s-text rte"><p>Distribution, sourcing, regulatory guidance, logistics, and private label.</p></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </hdt-slider>
-      </div>
+  <div class="mg-cities" aria-label="Where we work" data-cities-ribbon tabindex="0">
+    <div class="mg-cities__track">
+      <span>New York</span><span>Tokyo</span><span>Bangkok</span><span>Israel</span><span class="mg-cities__future">China 2026</span><span class="mg-cities__future">Turkey 2026</span>
+      <span aria-hidden="true">New York</span><span aria-hidden="true">Tokyo</span><span aria-hidden="true">Bangkok</span><span aria-hidden="true">Israel</span><span class="mg-cities__future" aria-hidden="true">China 2026</span><span class="mg-cities__future" aria-hidden="true">Turkey 2026</span>
     </div>
   </div>
 </section>
+<script>
+  (() => {
+    const ribbon = document.querySelector("[data-cities-ribbon]");
+    const track = ribbon?.querySelector(".mg-cities__track");
+    const switcher = document.getElementById("mg-ribbon-switcher");
+    if (!ribbon || !track) return;
+
+    const prefersReduce = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const cities = [...track.querySelectorAll(":scope > span")];
+    let focused = null;
+    let frame = 0;
+    let mode = "auto";
+    let dragging = false;
+    let dragStartX = 0;
+    let dragScrollLeft = 0;
+    let loopWidth = 0;
+
+    const measureLoop = () => {
+      loopWidth = track.scrollWidth / 2;
+    };
+
+    const syncFocus = () => {
+      frame = requestAnimationFrame(syncFocus);
+      if (prefersReduce() || ribbon.classList.contains("mg-cities--static")) return;
+      const mid = ribbon.getBoundingClientRect().left + ribbon.clientWidth / 2;
+      let best = null;
+      let bestDist = Infinity;
+      for (const city of cities) {
+        const rect = city.getBoundingClientRect();
+        if (rect.right < mid - 80 || rect.left > mid + 80) continue;
+        const dist = Math.abs(rect.left + rect.width / 2 - mid);
+        if (dist < bestDist) {
+          bestDist = dist;
+          best = city;
+        }
+      }
+      if (best === focused) return;
+      focused?.classList.remove("is-focus");
+      focused = best;
+      focused?.classList.add("is-focus");
+    };
+
+    const wrapManualScroll = () => {
+      if (mode !== "manual" || !loopWidth) return;
+      if (ribbon.scrollLeft >= loopWidth) ribbon.scrollLeft -= loopWidth;
+      else if (ribbon.scrollLeft < 1) ribbon.scrollLeft += loopWidth;
+    };
+
+    const applyRibbonMode = (next) => {
+      dragging = false;
+      ribbon.classList.remove("is-dragging");
+      mode = prefersReduce() ? "static" : next === "manual" ? "manual" : "auto";
+      ribbon.classList.toggle("mg-cities--manual", mode === "manual");
+      ribbon.classList.toggle("mg-cities--static", mode === "static");
+      ribbon.classList.toggle("mg-cities--auto", mode === "auto");
+      if (mode === "manual") {
+        measureLoop();
+        ribbon.scrollLeft = Math.max(2, Math.min(loopWidth * 0.2, loopWidth - 2));
+      } else {
+        ribbon.scrollLeft = 0;
+      }
+      switcher?.querySelectorAll("[data-ribbon]").forEach((btn) => {
+        const active = btn.dataset.ribbon === (mode === "manual" ? "manual" : "auto");
+        btn.classList.toggle("is-active", active);
+        btn.setAttribute("aria-pressed", String(active));
+        btn.disabled = prefersReduce();
+      });
+      const url = new URL(window.location.href);
+      if (mode === "manual") url.searchParams.set("ribbon", "manual");
+      else url.searchParams.delete("ribbon");
+      history.replaceState(null, "", url);
+    };
+
+    const onPointerDown = (event) => {
+      if (mode !== "manual" || event.pointerType === "touch" || event.button > 0) return;
+      dragging = true;
+      ribbon.classList.add("is-dragging");
+      dragStartX = event.clientX;
+      dragScrollLeft = ribbon.scrollLeft;
+      ribbon.setPointerCapture?.(event.pointerId);
+    };
+    const onPointerMove = (event) => {
+      if (!dragging || mode !== "manual") return;
+      ribbon.scrollLeft = dragScrollLeft - (event.clientX - dragStartX);
+      wrapManualScroll();
+    };
+    const onPointerUp = (event) => {
+      if (!dragging) return;
+      dragging = false;
+      ribbon.classList.remove("is-dragging");
+      try {
+        ribbon.releasePointerCapture?.(event.pointerId);
+      } catch (_) {}
+      wrapManualScroll();
+    };
+
+    ribbon.addEventListener("pointerdown", onPointerDown);
+    ribbon.addEventListener("pointermove", onPointerMove);
+    ribbon.addEventListener("pointerup", onPointerUp);
+    ribbon.addEventListener("pointercancel", onPointerUp);
+    ribbon.addEventListener("scroll", () => {
+      if (mode === "manual" && !dragging) wrapManualScroll();
+    }, { passive: true });
+    ribbon.addEventListener("wheel", (event) => {
+      if (mode !== "manual") return;
+      if (Math.abs(event.deltaX) >= Math.abs(event.deltaY)) return;
+      ribbon.scrollLeft += event.deltaY;
+      event.preventDefault();
+      wrapManualScroll();
+    }, { passive: false });
+    ribbon.addEventListener("keydown", (event) => {
+      if (mode !== "manual") return;
+      if (event.key === "ArrowRight") {
+        ribbon.scrollLeft += 80;
+        event.preventDefault();
+        wrapManualScroll();
+      } else if (event.key === "ArrowLeft") {
+        ribbon.scrollLeft -= 80;
+        event.preventDefault();
+        wrapManualScroll();
+      }
+    });
+
+    window.addEventListener("resize", () => {
+      if (mode === "manual") measureLoop();
+    });
+
+    const initialRibbon = new URLSearchParams(window.location.search).get("ribbon") === "manual" ? "manual" : "auto";
+    applyRibbonMode(initialRibbon);
+    switcher?.addEventListener("click", (event) => {
+      const btn = event.target.closest("[data-ribbon]");
+      if (!btn || btn.disabled) return;
+      applyRibbonMode(btn.dataset.ribbon);
+    });
+
+    if (!prefersReduce()) {
+      frame = requestAnimationFrame(syncFocus);
+      window.addEventListener("pagehide", () => cancelAnimationFrame(frame), { once: true });
+    }
+  })();
+</script>
+
+<section id="shopify-section-stats" class="shopify-section hdt-section">
+  <div color-scheme="scheme-1" class="mg-stats hdt-s-gradient hdt-section-spacing" style="--section-pt: 40px; --section-pb: 48px; --section-pt-xl: 56px; --section-pb-xl: 64px">
+    <div class="hdt-container">
+      <ul class="mg-stats__grid" data-mg-stats>
+        <li class="mg-stats__item">
+          <p class="mg-stats__value" data-count-to="70" data-count-suffix="+">70+</p>
+          <h2 class="mg-stats__label">Years of combined expertise</h2>
+        </li>
+        <li class="mg-stats__item">
+          <p class="mg-stats__value" data-count-to="3">3</p>
+          <h2 class="mg-stats__label">Regions worldwide</h2>
+        </li>
+        <li class="mg-stats__item">
+          <p class="mg-stats__value" data-count-to="5">5</p>
+          <h2 class="mg-stats__label">Ways we go to market</h2>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<script>
+  (() => {
+    const root = document.querySelector("[data-mg-stats]");
+    if (!root) return;
+    const values = [...root.querySelectorAll("[data-count-to]")];
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    const render = (el, n) => {
+      el.textContent = `${n}${el.dataset.countSuffix || ""}`;
+    };
+
+    const animate = (el) => {
+      const target = Number(el.dataset.countTo) || 0;
+      if (reduce) {
+        render(el, target);
+        return;
+      }
+      const duration = 1100;
+      const start = performance.now();
+      const tick = (now) => {
+        const t = Math.min(1, (now - start) / duration);
+        const eased = 1 - Math.pow(1 - t, 3);
+        render(el, Math.round(target * eased));
+        if (t < 1) requestAnimationFrame(tick);
+      };
+      render(el, 0);
+      requestAnimationFrame(tick);
+    };
+
+    if (!("IntersectionObserver" in window)) {
+      values.forEach(animate);
+      return;
+    }
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          values.forEach(animate);
+          io.disconnect();
+        });
+      },
+      { threshold: 0.45 }
+    );
+    io.observe(root);
+  })();
+</script>
 
 <section id="about" class="shopify-section hdt-section">
 <style>
@@ -213,7 +403,7 @@ body:has(> main > .section-sp-transparent.hdt-section:first-child):not(:has(> .h
         <img src="images/medglobe/presence.webp" alt="MedGlobe coordinates healthcare supply across international markets" width="1200" height="800" loading="lazy" sizes="100vw">
       </picture>
       <div class="hdt-media-content hdt-place-self-center-start hdt-content-horizontal" style="--overlap-content-mw: 680px">
-        <div class="hdt-media-content-wrapp">
+        <div class="hdt-media-content-wrapp mg-reveal" data-mg-reveal>
           <div class="hdt-theme-block hdt-label-emoij hdt-font-medium hdt-text-lg">About MedGlobe</div>
           <h2 class="hdt-theme-block hdt-heading-block hdt-h1 hdt-heading">Experience across markets. Judgment at every step.</h2>
           <div class="hdt-theme-block hdt-text-block rte hdt-s-text hdt-text-xl">
@@ -227,10 +417,10 @@ body:has(> main > .section-sp-transparent.hdt-section:first-child):not(:has(> .h
 </section>
 
 <section id="mission" class="shopify-section hdt-section">
-<div color-scheme="scheme-2" class="hdt-section-spacing hdt-s-gradient" style="--section-pt: 60px; --section-pb: 60px; --section-pt-xl: 88px; --section-pb-xl: 88px">
+<div color-scheme="scheme-1" class="mg-mission hdt-section-spacing hdt-s-gradient" style="--section-pt: 40px; --section-pb: 48px; --section-pt-xl: 56px; --section-pb-xl: 64px">
   <div class="hdt-container">
     <div class="hdt-section-title hdt-text-left">
-      <div class="hdt-inner-section-title" style="--title-custom-width: 860px">
+      <div class="hdt-inner-section-title mg-reveal" data-mg-reveal style="--title-custom-width: 860px">
         <div class="hdt-theme-block hdt-label-emoij hdt-font-medium hdt-text-lg">Why we choose</div>
         <h2 class="hdt-theme-block hdt-heading-block hdt-h2 hdt-heading">Patient impact before product volume.</h2>
         <div class="hdt-theme-block hdt-text-block rte hdt-s-text hdt-text-xl"><p>We do not carry every product that could sell. We scrutinize the manufacturer, the evidence, the market need, and the people a product is meant to help.</p>
@@ -245,13 +435,13 @@ body:has(> main > .section-sp-transparent.hdt-section:first-child):not(:has(> .h
 <div color-scheme="scheme-4" class="mg-ways hdt-text--with-icon hdt-section-spacing hdt-s-gradient" style="--section-pt: 60px; --section-pb: 60px; --section-pt-xl: 88px; --section-pb-xl: 88px">
   <div class="hdt-container">
     <div class="hdt-section-title hdt-text-left">
-      <div class="hdt-inner-section-title" style="--title-custom-width: 860px">
+      <div class="hdt-inner-section-title mg-reveal" data-mg-reveal style="--title-custom-width: 860px">
         <div class="hdt-theme-block hdt-label-emoij hdt-font-medium hdt-text-lg">What we do</div>
         <h2 class="hdt-theme-block hdt-heading-block hdt-h2 hdt-heading">Five ways we get you to market</h2>
         <div class="hdt-theme-block hdt-text-block rte hdt-s-text hdt-text-xl"><p>Distribution, sourcing, regulatory guidance, logistics, and private label  -  one standard of care from manufacturer to market.</p></div>
       </div>
     </div>
-    <div class="mg-bento" data-mg-bento>
+    <div class="mg-bento" data-mg-bento data-mg-reveal-grid>
       <article class="mg-bento__card">
         <div class="mg-bento__media" aria-hidden="true">
           <img class="mg-bento__img" src="images/medglobe/way-01.webp" alt="" width="1600" height="1066" loading="lazy">
@@ -323,26 +513,48 @@ body:has(> main > .section-sp-transparent.hdt-section:first-child):not(:has(> .h
         <button type="button" class="mg-bento__hit" aria-expanded="false" aria-label="Private label and co-branding"></button>
       </article>
     </div>
-    <div class="mg-partners">
-      <p class="hdt-font-semibold">Built for careful market entry</p>
-      <p>We work with distributors, retailers, clinics, laboratories, pharmacies, and healthcare organizations that need a transparent path from manufacturer to market.</p>
-    </div>
   </div>
 </div>
 </section>
-<script>(()=>{document.querySelectorAll(".mg-bento__img").forEach(img=>{img.addEventListener("error",()=>{img.hidden=true})});document.querySelectorAll("[data-mg-bento]").forEach(root=>{const cards=[...root.querySelectorAll(".mg-bento__card")];cards.forEach(card=>{const btn=card.querySelector(".mg-bento__hit");if(!btn)return;btn.addEventListener("click",()=>{const open=card.classList.contains("is-open");cards.forEach(other=>{other.classList.remove("is-open");other.querySelector(".mg-bento__hit")?.setAttribute("aria-expanded","false")});if(!open){card.classList.add("is-open");btn.setAttribute("aria-expanded","true")}})})})})();</script>
+<script>
+  (() => {
+    document.querySelectorAll(".mg-bento__img").forEach((img) => {
+      img.addEventListener("error", () => {
+        img.hidden = true;
+      });
+    });
+    document.querySelectorAll("[data-mg-bento]").forEach((root) => {
+      const cards = [...root.querySelectorAll(".mg-bento__card")];
+      cards.forEach((card) => {
+        const btn = card.querySelector(".mg-bento__hit");
+        if (!btn) return;
+        btn.addEventListener("click", () => {
+          const open = card.classList.contains("is-open");
+          cards.forEach((other) => {
+            other.classList.remove("is-open");
+            other.querySelector(".mg-bento__hit")?.setAttribute("aria-expanded", "false");
+          });
+          if (!open) {
+            card.classList.add("is-open");
+            btn.setAttribute("aria-expanded", "true");
+          }
+        });
+      });
+    });
+  })();
+</script>
 
 <section id="focus" class="shopify-section hdt-section">
-<div color-scheme="scheme-2" class="mg-kinds hdt-text--with-icon hdt-section-spacing hdt-s-gradient" style="--section-pt: 60px; --section-pb: 60px; --section-pt-xl: 88px; --section-pb-xl: 88px">
+<div color-scheme="scheme-1" class="mg-kinds hdt-text--with-icon hdt-section-spacing hdt-s-gradient" style="--section-pt: 40px; --section-pb: 48px; --section-pt-xl: 56px; --section-pb-xl: 64px">
   <div class="hdt-container">
     <div class="hdt-section-title hdt-text-left">
-      <div class="hdt-inner-section-title" style="--title-custom-width: 860px">
+      <div class="hdt-inner-section-title mg-reveal" data-mg-reveal style="--title-custom-width: 860px">
         <div class="hdt-theme-block hdt-label-emoij hdt-font-medium hdt-text-lg">Focus</div>
         <h2 class="hdt-theme-block hdt-heading-block hdt-h2 hdt-heading">Three kinds of work. One standard.</h2>
         <div class="hdt-theme-block hdt-text-block rte hdt-s-text hdt-text-xl"><p>Instruments, topicals, and devices  -  the same scrutiny on every line we carry.</p></div>
       </div>
     </div>
-    <div class="hdt-iconbox-wrap hdt-rounded">
+    <div class="hdt-iconbox-wrap hdt-rounded" data-mg-reveal-grid>
       <hdt-slider id="Slider-categories-icons" data-blocks_size="3" data-odd="0" class="hdt-slider hdt-slider__active-false md:hdt-slider__active-false xl:hdt-slider__active-false hdt-slide-spacing-x xl:hdt-slides-3 md:hdt-slides-3 hdt-slides-1" config='{ "autoHeight": false, "active": false, "loop": false, "fade": false, "slidesToScroll": 1 }'>
         <div class="hdt-slider__viewport">
           <div class="hdt-slider__container md:hdt-flex-wrap md:hdt-justify-center"><div class="hdt-icon-item hdt-slider__slide">
@@ -377,24 +589,17 @@ body:has(> main > .section-sp-transparent.hdt-section:first-child):not(:has(> .h
 </div>
 </section>
 
-<section id="values-intro" class="shopify-section hdt-section">
-<div color-scheme="scheme-2" class="hdt-section-spacing hdt-s-gradient" style="--section-pt: 60px; --section-pb: 20px; --section-pt-xl: 88px; --section-pb-xl: 24px">
+<section id="values" class="shopify-section hdt-section">
+<div color-scheme="scheme-2" class="mg-values hdt-text--with-icon hdt-s-gradient hdt-section-spacing" style="--section-pt: 48px; --section-pb: 56px; --section-pt-xl: 64px; --section-pb-xl: 72px">
   <div class="hdt-container">
     <div class="hdt-section-title hdt-text-left">
-      <div class="hdt-inner-section-title" style="--title-custom-width: 860px">
+      <div class="hdt-inner-section-title mg-reveal" data-mg-reveal style="--title-custom-width: 860px">
         <div class="hdt-theme-block hdt-label-emoij hdt-font-medium hdt-text-lg">Our values</div>
         <h2 class="hdt-theme-block hdt-heading-block hdt-h2 hdt-heading">What we will not compromise</h2>
         <div class="hdt-theme-block hdt-text-block rte hdt-s-text hdt-text-xl"><p>These are not slogans around the work. They are the tests we apply to every manufacturer, market, and partnership.</p></div>
       </div>
     </div>
-  </div>
-</div>
-</section>
-
-<section id="values-icons" class="shopify-section hdt-section">
-<div color-scheme="scheme-2" class="mg-values hdt-text--with-icon hdt-s-gradient hdt-section-spacing" style="--section-pt: 0px; --section-pb: 60px; --section-pt-xl: 0px; --section-pb-xl: 88px">
-  <div class="hdt-container-xl">
-    <div class="hdt-iconbox-wrap hdt-rounded">
+    <div class="hdt-iconbox-wrap hdt-rounded" data-mg-reveal-grid>
       <hdt-slider id="Slider-values-icons" data-blocks_size="5" data-odd="0" class="hdt-slider hdt-slider__active-false md:hdt-slider__active-false xl:hdt-slider__active-false hdt-slide-spacing-x xl:hdt-slides-5 md:hdt-slides-2 hdt-slides-1" config='{ "autoHeight": false, "active": false, "loop": false, "fade": false, "slidesToScroll": 1 }'>
         <div class="hdt-slider__viewport">
           <div class="hdt-slider__container md:hdt-flex-wrap md:hdt-justify-center"><div class="hdt-icon-item hdt-slider__slide">
@@ -449,14 +654,14 @@ body:has(> main > .section-sp-transparent.hdt-section:first-child):not(:has(> .h
   <div color-scheme="scheme-4" class="mg-impact hdt-section-spacing hdt-s-gradient" style="--section-pt: 60px; --section-pb: 60px; --section-pt-xl: 96px; --section-pb-xl: 96px">
     <div class="hdt-container">
       <div class="mg-impact__grid">
-        <div class="mg-impact__statement">
+        <div class="mg-impact__statement mg-reveal" data-mg-reveal>
           <div class="hdt-theme-block hdt-label-emoij hdt-font-medium hdt-text-lg">Beyond trade</div>
           <h2 class="hdt-theme-block hdt-heading-block hdt-h1 hdt-heading">Our responsibility travels too.</h2>
           <div class="hdt-theme-block hdt-text-block rte hdt-s-text hdt-text-xl">
             <p>Healthcare reaches further when companies invest in the communities around it. MedGlobe supports people and organizations doing meaningful work  -  because being a good partner should extend beyond a shipment.</p>
           </div>
         </div>
-        <div class="mg-impact__stories" aria-label="Community impact examples">
+        <div class="mg-impact__stories" aria-label="Community impact examples" data-mg-reveal-grid>
           <article class="mg-impact__story">
             <p class="mg-impact__eyebrow">Thailand</p>
             <h3 class="hdt-heading hdt-h3">Supporting culture and community</h3>
@@ -474,26 +679,48 @@ body:has(> main > .section-sp-transparent.hdt-section:first-child):not(:has(> .h
 </section>
 
 <section id="presence" class="shopify-section hdt-section">
-  <div color-scheme="scheme-2" class="mg-presence hdt-section-spacing hdt-s-gradient" style="--section-pt: 60px; --section-pb: 60px; --section-pt-xl: 88px; --section-pb-xl: 88px">
+  <div color-scheme="scheme-2" class="mg-presence hdt-section-spacing hdt-s-gradient" style="--section-pt: 56px; --section-pb: 56px; --section-pt-xl: 72px; --section-pb-xl: 72px">
     <div class="hdt-container">
-      <div class="mg-presence__intro">
+      <div class="mg-presence__intro mg-reveal" data-mg-reveal>
         <div class="hdt-theme-block hdt-label-emoij hdt-font-medium hdt-text-lg">Presence</div>
         <h2 class="hdt-theme-block hdt-heading-block hdt-h2 hdt-heading">Local knowledge, connected worldwide.</h2>
         <div class="hdt-theme-block hdt-text-block rte hdt-s-text hdt-text-xl"><p>Our partners work with people who understand their market, language, and path to care. We show our reach by city  -  never by street address.</p></div>
       </div>
-      <div class="mg-presence__map" role="img" aria-label="MedGlobe presence in New York, Tokyo, and Bangkok">
-        <img src="images/medglobe/world-map.svg" alt="" width="1200" height="608" loading="eager">
+      <div class="mg-presence__map" role="img" aria-label="MedGlobe presence in New York, Tokyo, and Bangkok" data-mg-reveal-grid>
+        <img src="images/medglobe/world-map.svg" alt="" width="2370" height="1200" loading="lazy">
         <span class="mg-map-pin mg-map-pin--new-york"><i aria-hidden="true"></i><b>New York</b></span>
         <span class="mg-map-pin mg-map-pin--tokyo"><i aria-hidden="true"></i><b>Tokyo</b></span>
         <span class="mg-map-pin mg-map-pin--bangkok"><i aria-hidden="true"></i><b>Bangkok</b></span>
       </div>
       <div class="mg-presence__footer">
         <p>Additional offices planned for China and Turkey in 2026.</p>
-        <a class="hdt-link hdt-font-semibold" href="#contact">Start a conversation <span aria-hidden="true">-&gt;</span></a>
+        <a class="hdt-link hdt-font-semibold mg-presence__cta" href="#contact">Start a conversation <span aria-hidden="true">→</span></a>
       </div>
     </div>
   </div>
 </section>
+<script>
+  (() => {
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const reveal = [...document.querySelectorAll("[data-mg-reveal], [data-mg-reveal-grid]")];
+    if (!reveal.length) return;
+    if (reduce || !("IntersectionObserver" in window)) {
+      reveal.forEach((el) => el.classList.add("is-inview"));
+      return;
+    }
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-inview");
+          io.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.22, rootMargin: "0px 0px -6% 0px" }
+    );
+    reveal.forEach((el) => io.observe(el));
+  })();
+</script>
 
 <section id="contact" class="shopify-section hdt-section">
   <div color-scheme="scheme-1" class="hdt-section__contact hdt-section-spacing hdt-s-gradient" style="--section-pt: 60px; --section-pb: 60px; --section-pt-xl: 88px; --section-pb-xl: 88px">
@@ -572,11 +799,11 @@ body:has(> main > .section-sp-transparent.hdt-section:first-child):not(:has(> .h
 </main>
 
 <footer id="shopify-section-footer" class="shopify-section shopify-section-group-footer-group hdt-section hdt-section-footer">
-  <div color-scheme="scheme-4" class="mg-footer hdt-s-gradient">
-    <div class="hdt-container">
-      <div class="mg-footer__top">
+  <div class="hdt-container">
+    <div class="mg-footer">
+      <div class="mg-footer__main">
         <a href="#top" class="mg-footer__logo" aria-label="MedGlobe, back to top">
-          <img src="images/medglobe/logo.webp" alt="MedGlobe" width="72" height="33" loading="lazy">
+          <img src="images/medglobe/logo.webp" alt="MedGlobe" width="80" height="37" loading="lazy">
         </a>
         <nav class="mg-footer__nav" aria-label="Footer">
           <a href="#about">About</a>
@@ -590,7 +817,7 @@ body:has(> main > .section-sp-transparent.hdt-section:first-child):not(:has(> .h
           <a href="tel:+16467852774">(646) 785-2774</a>
         </div>
       </div>
-      <div class="mg-footer__bottom">
+      <div class="mg-footer__band">
         <p class="mg-footer__tagline">Selective healthcare partnerships, guided by local expertise and connected worldwide.</p>
         <small class="mg-footer__copy">&copy; 2026 MedGlobe</small>
       </div>

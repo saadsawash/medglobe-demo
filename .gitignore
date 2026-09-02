@@ -3,6 +3,9 @@
 .env.*
 *.log
 .cursor/
+.todo
+medglobe presentation.ai
+*.ai
 
 # Steadiwear source dump (large originals) — optimized copies live in steadiwear-product-demo-1/images/
 _steadiwear-assets/
