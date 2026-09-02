@@ -1,6 +1,6 @@
 # MedGlobe — client needs
 
-Authoritative source is the **25 August** client meeting with Evren Keleş and Esra ([`_transcripts/meeting-2.md`](_transcripts/meeting-2.md)). The **24 August** call ([`_transcripts/meeting-1.md`](_transcripts/meeting-1.md)) was internal prep only.
+Authoritative sources: **1 September** demo-review meeting ([`_transcripts/meeting-3.md`](_transcripts/meeting-3.md)) for selected layouts and next build direction; **25 August** brief with Evren Keleş and Esra ([`_transcripts/meeting-2.md`](_transcripts/meeting-2.md)) for overall site goals. The **24 August** call ([`_transcripts/meeting-1.md`](_transcripts/meeting-1.md)) was internal prep only.
 
 The short version: MedGlobe wants a **professional company site**, not an online shop. Shopify is the platform because some countries will sell later. The homepage introduces the company. Two product stories sit underneath. Visitors should leave thinking they chose a serious, selective, international medical importer — not that they walked into a catalog.
 
@@ -54,7 +54,7 @@ Manufacturer: [steadiwear.com](https://steadiwear.com/)
 
 Canadian company. Flagship is **Steadi-3 Plus**, a battery-free glove that uses magnetic vibration-absorber tech (tuned mass damper, same idea as damping a building in an earthquake) to stabilize essential tremor / Parkinson’s-related hand tremor. FDA-registered Class I. About 290 g. List on the manufacturer site is **$999 USD** (right / left / both). They lead with clinical numbers (84% improved vs no device, 70% vs placebo, blinded neurologist ratings), a [validation study](https://steadiwear.com/pages/steadi-3-validation-study), testimonials, and “for providers / for patients” IA. That science-led page is the tone Evren and Esra liked (“explore the science behind it”), not a generic add-to-cart PDP.
 
-**MedGlobe use:** richest docs and photos already in hand. Build the **US page first as the master**, then translate (Hebrew, Turkish, etc.). **Do not sell Steadiwear on the US MedGlobe site.** First sales markets: Thailand, Israel, Turkey.
+**MedGlobe use:** richest docs and photos already in hand. **English master first**, then translate (Hebrew, Turkish, etc.). The Steadiwear page is **not for the American customer** — target Thailand, Israel, Turkey. Shopify handles market/locale routing when checkout goes live. **Do not sell Steadiwear on the US MedGlobe site.**
 
 ### Product 2 — Radika / Yeshim (oncology-adjacent skincare)
 
@@ -63,6 +63,8 @@ Manufacturer: [radikaaromaterapi.com](https://radikaaromaterapi.com/)
 Turkish aromatherapy brand (full catalog: oils, soaps, home scent, etc.). What MedGlobe is taking is **Yeshim Serisi**, listed on Radika under [Onkoloji](https://radikaaromaterapi.com/onkoloji): 11 natural products for skin that has become sensitive during intensive care — scalp, brows, nails, dry body. No synthetic perfume, parabens, or heavy chemicals. Evren and Esra walked the live Radika PDP in the meeting and disliked it (tiny bottle, “add to cart” as the first thing you read, weak photos). Their Instagram is closer to the quality they want.
 
 **MedGlobe use:** coming to the **US**. Aim is hospitals (Memorial Sloan, MD Anderson) and a **scientific / cosmetic-under-oncology** story, not Amazon volume. Amazon may come later; they will not lead with disease claims (FDA/label rules). Evren: facility registration and the on-pack label have to be shared with FDA. Redesign for a US audience; do not clone the current Radika store.
+
+**September update:** Esra rejected recent label/visual directions from the designer (post–1 Sept meeting). Do not use those assets. Plan ~**12 Yeshim SKUs max**, not the full Radika catalog. **No brown bottles** — category default; explore deep ocean blue and dark green (light-transmission constraints). Yeshim story (founder silhouette, oncology-adjacent care) leads before product grids.
 
 Country, not product, decides whether checkout is on. Infrastructure (cart, add to cart) should exist in the theme so it can be switched on later. For launch: cart, shop, search, and login are **off**.
 
@@ -133,17 +135,48 @@ A place (menu later, not a “coming soon” tab) for sponsored events, photos, 
 - Start with placeholders; they will say if it “smells” stock.
 - Be careful with **AI faces** (EU + emerging US state rules). Evren is not asking for faces on the homepage.
 
+**Typography**
+
+- **Basic, standard sans-serif** — like a business letter or Outlook default. No antique, decorative, or eye-tiring display fonts (corp-demo-3 type rejected).
+- Evren wants to see **Aptos**. Prefer ordinary, readable body type across corporate and product pages.
+
 **Motion**
 
 - From the pre-meeting (still valid): **no scroll-hijacking**, no “swipe sideways to keep going” tricks. Evren does not like busy interaction.
+- **City ticker** (corp-demo-3 style) is liked — cities must be **real MedGlobe presence**, not decorative names. Try **both** scrolling and static versions. Israel alongside New York, Tokyo, Bangkok, China/Turkey 2026.
 
 **Product pages**
 
+- **Selected layout:** `steadiwear-product-demo-4` — **fixed product stage left, scrolling story right** (similar to [Saje Natural Wellness](https://www.saje.com/) structure, not their shop-first hero).
+- **Rejected:** centered / blueprint-style layouts (`steadiwear-product-demo-3` — client liked nothing in that direction).
+- **One template for all products** — same layout everywhere; only content and product accent colors change. Visitor must feel “I'm on MedGlobe,” not a marketplace of unrelated mini-sites.
+- Product page **character must match corporate** — pull **medical / regulatory weight** from corp-demo-1. Do **not** default to each manufacturer's logo palette (Steadiwear greens rejected for page chrome; lean **more blue** / MedGlobe direction).
 - Large images, science first — they liked **“Explore the science behind it.”**
 - Embed **publications** (medical journals), not just a feature grid. Certificates (FDA registration, facility registration, labels) matter, especially for US-bound oils, but publications are the proof.
 - Feature lists will be shorter than a typical consumer PDP.
 - Evren found left/right “box, box, box” layouts (the water-bottle example) old. Prefer bigger visuals, more like the science-led manufacturer page.
 - [Radika](https://radikaaromaterapi.com/) / Yeshim is the anti-example (tiny bottle, “add to cart” first). Instagram is closer to the photo quality they want. Redesign Yeshim for a US audience.
+- Build **Steadiwear + Yeshim** in the same template early to stress-test unity before launch.
+
+---
+
+## September 1 demo review (decisions)
+
+Full transcript: [`_transcripts/meeting-3.md`](_transcripts/meeting-3.md).
+
+| Area | Decision |
+|---|---|
+| **Corporate homepage** | **corp-demo-1** (Athora-shaped) is the base. Iterate on feedback — not a new concept direction. |
+| **Header / logo** | Try MedGlobe **left-aligned** (preferred) and **right-aligned** on scroll — they like the compact pill where logo stays while nav hides. corp-demo-1 feels too left-heavy; balance if possible. |
+| **City ribbon** | Keep the **scrolling city band** from corp-demo-3; also try a **static** version. Cities = real offices only (incl. Israel). |
+| **Typography** | Standard sans-serif; show **Aptos**. Reject decorative/antique faces. |
+| **Product page layout** | **steadiwear-product-demo-4** (scroll companion). Reject demo-3 blueprint. |
+| **Product page look** | Merge demo-4 layout with corp-demo-1 **medical/regulatory** tone and **MedGlobe blues** — not Steadiwear logo colors. |
+| **Template policy** | **One product-page skeleton** for Steadiwear, Yeshim, and future lines. Per-product accent color OK; per-product layout is not. |
+| **Second product demo** | Prepare **Yeshim/Radika** in same template soon (use existing Radika content; ignore rejected Sept label pack). |
+| **Anti-pattern** | Saje-style **shop grid with prices above the fold** — still rejected. Story and who-we-are first. |
+| **Delivery** | Refined link by **Friday** (before Monday 8 Sept). Esra will show **Hasan Bey** (partner / signatory) when he arrives in the US. |
+| **Next call** | Same time **Monday 8 September**. |
 
 ---
 
@@ -151,18 +184,11 @@ A place (menu later, not a “coming soon” tab) for sponsored events, photos, 
 
 Sending five Shopify demo links did not work. Evren and Esra could not see the differences, felt the demos were **sales sites**, and did not know what to look at. They want to sit together, give each scene a few seconds, and hear **what you are asking them to notice**.
 
-**Next meeting**
+After the 1 September review, direction is narrower: **refine corp-demo-1 + steadiwear-product-demo-4** rather than explore more unrelated concepts.
 
-1. Agency picks **three** themes (Athora is demo 1 in this repo; two more TBD).
-2. Explain differences in plain language (“explain like I’m five”): menus, logo placement, image transitions, what suits a **text-led company page** vs a picture-heavy catalog.
-3. Spell out **what can change vs what cannot** (fonts, colors, buttons, cart/account chrome). A locked cart icon in the header could be a deal-breaker.
-4. Include prices (~$300 one-time was mentioned for the Shopify theme they were looking at).
-5. Send the three before the meeting so they can glance — **do not expect a decision by email**. Decision happens live, walking through two themes side by side if needed.
-6. Product-page capability of the theme matters too (page builders / different layouts per product). Homepage is first; product pages are the more valuable part of the site.
+If monthly developer hours are left after homepage prep, build **both** Steadiwear and Yeshim in the **same product template** — Evren wants two products in build to catch unity issues early.
 
-If monthly developer hours are left after homepage prep, start a product page in the same package. **Steadiwear first** if they have to choose; Yeshim is fine too; both if time allows. Evren does not want unused hours slipped into next month.
-
-Next call: same time the following week. Evren flies to Turkey Tuesday but can still join that slot.
+Next call: **Monday 8 September**, same time. Deliver refined demo link by **Friday 5 September** for Hasan Bey's visual review.
 
 ---
 
@@ -178,11 +204,13 @@ Use these without waiting for a new brief:
 
 Still coming from them: advocacy example links, hero image shortlist, the selectivity catchphrase (Evren does not have the sentence yet).
 
+**Do not use (September):** Radika/Yeshim label and visual pack Esra rejected after Evren's morning meeting on 1 Sept — designer went off brief.
+
 ---
 
-## Demo build status (August 2026)
+## Demo build status (September 2026)
 
-Snapshot of what exists in this repo today. Client brief above is unchanged; this section tracks **implementation only**.
+Snapshot of what exists in this repo. Client brief above; this section tracks **implementation and selections**.
 
 ### Repository
 
@@ -273,36 +301,40 @@ Custom styles for corp-demo-1 live in `corp-demo-1/css/medglobe.css`. corp-demo-
 | `way-01.webp` … `way-05.webp` | Bento card backgrounds |
 | `world-map.svg` | Presence map (BlankMap World simple) |
 
+### Client-selected directions (1 September)
+
+| Demo | Status |
+|---|---|
+| `corp-demo-1/` | **Selected** — refine header (logo L/R), reduce left-heavy feel, add city ribbon (scroll + static variants), typography → Aptos/standard sans |
+| `corp-demo-2/` … `corp-demo-4/` | Exploration only — ideas to borrow (empty room, ticker, inquiry Q&A), not alternate homepage candidates |
+| `steadiwear-product-demo-4/` | **Selected layout** — merge with corp-demo-1 medical tone + MedGlobe blues; fill empty right column |
+| `steadiwear-product-demo-3/` | **Rejected** as product direction |
+| `steadiwear-product-demo-1/` | Reference for medical/regulatory sections and evidence block |
+| Yeshim product demo | **Next** — same template as demo-4; ~12 SKUs; no brown bottles; story-first |
+
 ### Not built yet
 
-- Themes 2 and 3 for the three-theme client walkthrough
-- Steadiwear / Yeshim product pages
+- Friday delivery pass on corp-demo-1 + steadiwear-product-demo-4 per meeting-3 notes
+- Yeshim page in unified product template
+- Aptos / unified typography across corp + product
 - Real client photography and final catchphrase
-- Shopify deployment (this is a static export demo)
+- Shopify deployment (static HTML demos in repo)
 - Advocacy as a live menu item (content exists as `#impact` only)
 
-### Open (unchanged from brief)
+### Open
 
-1. Final three themes, with a can/cannot-change list and prices.
-2. Exact catchphrase (global reach is on the page; selectivity line still being refined).
-3. Advocacy label and whether it ships in v1 or a week later.
-4. Which product page to start if hours remain (default: Steadiwear).
+1. Logo left vs right on scroll — show both; client prefers left if balanced.
+2. City ticker: scrolling vs static — build both for Friday review.
+3. Exact catchphrase (global reach is on the page; selectivity line still being refined).
+4. Advocacy label and whether it ships in v1 or a week later.
 5. Shopify account setup with Esra.
 6. Whether Japan / Thailand / NY street details stay in a private contact path or vanish entirely.
+7. Hasan Bey visual sign-off (partner) — Friday link enables Monday walkthrough.
 
 ---
 
-## Three theme demos (next meeting)
+## Demo folders
 
-Corporate demos: `corp-demo-1/` … `corp-demo-4/`; hub at `corp/`. Product demos will use a separate `product-demo-*` prefix later. Briefs, transcripts, and the current-site scrape stay at the repo root.
+Corporate: `corp-demo-1/` … `corp-demo-4/`; hub at `corp/`. Product: `steadiwear-product-demo-1/` … `steadiwear-product-demo-4/`. Briefs, transcripts, and the current-site scrape stay at the repo root.
 
-The Athora homepage demo is **build-ready for walkthrough**: IA, hidden store chrome, rewritten narrative, bento services, city-only map, contact form, plum/light rhythm. See **Demo build status** above for section-by-section detail.
-
-Not in hand yet (placeholders are fine; they will react to structure):
-
-- Logo hex values and final client photography
-- Themes 2 and 3 (second and third Shopify base themes)
-- Final selectivity catchphrase line
-- Product-page content (Steadiwear / Yeshim)
-
-They asked you to walk three themes live and say what can vs cannot change. Do not expect a decision from an email of raw Shopify demos.
+**Next build target:** iterate **corp-demo-1** + **steadiwear-product-demo-4** into production-direction mocks; add **Yeshim** in the same product shell. Deliver link by **Friday** before the **8 September** call.
