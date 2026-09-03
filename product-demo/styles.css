@@ -325,6 +325,62 @@ p, h1, h2, ul, ol, figure, blockquote { margin: 0; }
 }
 .block > p { margin-bottom: 1.25rem; }
 
+.plot {
+  margin: 0 0 1.35rem;
+  padding: 1rem 0.9rem 0.8rem;
+  border-radius: 0.65rem;
+  background: rgb(var(--mg-muted));
+  border: 1px solid var(--line);
+}
+.plot svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.plot-label {
+  fill: rgb(var(--mg-navy) / 52%);
+  font-family: var(--body);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.plot-wave {
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+}
+.plot-wave--raw {
+  stroke: rgb(var(--mg-navy) / 28%);
+}
+.plot-wave--steady {
+  stroke: rgb(var(--mg-sky));
+}
+.plot.is-on .plot-wave--raw {
+  animation: plot-draw 0.95s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.plot.is-on .plot-wave--steady {
+  animation: plot-draw 1.1s 0.12s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.plot.is-live .plot-wave {
+  animation: none;
+  stroke-dasharray: none;
+  stroke-dashoffset: 0;
+}
+@keyframes plot-draw {
+  to { stroke-dashoffset: 0; }
+}
+.plot figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  color: var(--mute);
+}
+
 .hero__actions {
   display: flex;
   flex-wrap: wrap;
@@ -667,4 +723,9 @@ blockquote cite {
   .stage__img,
   .faces img,
   .progress i { transition: none; }
+  .plot-wave {
+    animation: none;
+    stroke-dasharray: none;
+    stroke-dashoffset: 0;
+  }
 }

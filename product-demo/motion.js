@@ -55,6 +55,45 @@
   const form = document.querySelector(".block--ask form");
   if (form) form.addEventListener("submit", (e) => e.preventDefault());
 
+  const wavePath = (midY, amp, cycles, phase) => {
+    let d = "";
+    for (let x = 0; x <= 400; x += 4) {
+      const y = midY + Math.sin((x / 400) * cycles * Math.PI * 2 + phase) * amp;
+      d += (x === 0 ? "M" : " L") + `${x} ${y.toFixed(2)}`;
+    }
+    return d;
+  };
+
+  const startPlot = (plot) => {
+    if (reduce || plot.dataset.plotLive) return;
+    plot.dataset.plotLive = "1";
+    const raw = plot.querySelector(".plot-wave--raw");
+    const steady = plot.querySelector(".plot-wave--steady");
+    if (!raw || !steady) return;
+
+    const cycles = 5.2;
+    raw.setAttribute("d", wavePath(52, 14, cycles, 0));
+    steady.setAttribute("d", wavePath(128, 3.5, cycles, 0));
+
+    window.setTimeout(() => {
+      plot.classList.add("is-live");
+      const origin = performance.now();
+      const tick = (now) => {
+        if (!plot.isConnected) return;
+        const phase = ((now - origin) / 1000) * 1.55;
+        raw.setAttribute("d", wavePath(52, 14, cycles, phase));
+        steady.setAttribute("d", wavePath(128, 3.5, cycles, phase));
+        requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    }, 1150);
+  };
+
+  const reveal = (root) => {
+    root.querySelectorAll("[data-in]").forEach((el) => el.classList.add("is-on"));
+    root.querySelectorAll("[data-plot]").forEach(startPlot);
+  };
+
   // Count-up stats
   const animateCount = (el) => {
     const target = Number(el.dataset.count || 0);
@@ -89,7 +128,7 @@
     (entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
-        entry.target.querySelectorAll("[data-in]").forEach((el) => el.classList.add("is-on"));
+        reveal(entry.target);
         io.unobserve(entry.target);
       });
     },
