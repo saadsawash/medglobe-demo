@@ -155,13 +155,28 @@ p, h1, h2, ul, ol, figure, blockquote { margin: 0; }
     grid-template-columns: minmax(20rem, 0.92fr) minmax(22rem, 1.08fr);
     gap: 2.5rem;
     align-items: start;
-    padding-top: 1.75rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
   }
 }
 
-/* Living product stage */
+/* Product stage: original box, vertically centered while sticky */
+.stage-pin {
+  --stage-header: 4.7rem;
+}
+@media (min-width: 980px) {
+  .stage-pin {
+    position: sticky;
+    top: calc(var(--stage-header) + 0.75rem);
+    height: calc(100svh - var(--stage-header) - 1.5rem);
+    display: flex;
+    align-items: center;
+  }
+}
+
 .stage {
   position: relative;
+  width: 100%;
   border-radius: 1.15rem;
   background: var(--panel);
   border: 1px solid var(--line);
@@ -170,12 +185,6 @@ p, h1, h2, ul, ol, figure, blockquote { margin: 0; }
   box-shadow:
     0 1px 0 rgb(var(--mg-paper) / 80%),
     0 18px 48px rgb(var(--mg-navy) / 6%);
-}
-@media (min-width: 980px) {
-  .stage {
-    position: sticky;
-    top: 4.75rem;
-  }
 }
 .stage__glow {
   position: absolute;
