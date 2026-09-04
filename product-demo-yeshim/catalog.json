@@ -1,0 +1,211 @@
+[
+  {
+    "id": "roll-on",
+    "slug": "dogal-roll-on-yeshim-serisi-koltuk-alti-bakimi-icin-dogal-icerikli-roll-on",
+    "source": "https://radikaaromaterapi.com/dogal-roll-on-yeshim-serisi-koltuk-alti-bakimi-icin-dogal-icerikli-roll-on",
+    "title_tr": "Doğal Roll-On",
+    "title_en": "Natural Roll-On",
+    "category": "body",
+    "focus": "Underarm care",
+    "desc_tr": "Yeshim doğal roll-on, gözenekleri tıkamadan ve terlemeyi engellemeden bakteri oluşumunu geciktirerek kötü kokularla savaşır. Cildi besler, enfeksiyona karşı korur. Paraben, alüminyum, sentetik koku, petrol bazlı kimyasal içermez. İçeriğinde tamamen doğal bitkisel yağlara yer verilmiştir. Kimyasal katkı içermez.",
+    "image": "images/products/roll-on.webp",
+    "lead": "A natural underarm roll-on that helps delay odor-causing bacteria without blocking pores or stopping sweat. Nourishes skin and supports comfort during sensitive periods.",
+    "points": [
+      "No aluminum or parabens",
+      "No synthetic fragrance",
+      "Pure botanical oils",
+      "Does not clog pores"
+    ],
+    "category_label": "Body care"
+  },
+  {
+    "id": "brow-oil",
+    "slug": "kas-bakim-yagi-yeshim-serisi-kas-dokulmesini-engellemek-ve-kil-koklerini-guclendirmek-icin",
+    "source": "https://radikaaromaterapi.com/kas-bakim-yagi-yeshim-serisi-kas-dokulmesini-engellemek-ve-kil-koklerini-guclendirmek-icin",
+    "title_tr": "Kaş Bakım Yağı",
+    "title_en": "Brow Care Oil",
+    "category": "hair",
+    "focus": "Brows & lashes",
+    "desc_tr": "Kaş bakım yağı, tedavi süresince dökülen kaşların yeniden sağlıklı çıkmasına yönelik destekleyici bakım yağıdır. İçeriğinde tamamen doğal ve saf bitkisel yağlara yer verilmiştir. Kimyasal katkılar içermez.",
+    "image": "images/products/brow-oil.webp",
+    "lead": "A supportive brow oil for hair that sheds during treatment — formulated to help brows return healthier with pure botanical oils and no chemical additives.",
+    "points": [
+      "Supports regrowth",
+      "Pure plant oils",
+      "No synthetic additives",
+      "Gentle daily use"
+    ],
+    "category_label": "Hair, brow & nail"
+  },
+  {
+    "id": "nail-oil",
+    "slug": "tirnak-bakim-yagi-yeshim-serisi-tirnak-guclendirici-bakim-yagi",
+    "source": "https://radikaaromaterapi.com/tirnak-bakim-yagi-yeshim-serisi-tirnak-guclendirici-bakim-yagi",
+    "title_tr": "Tırnak Bakım Yağı",
+    "title_en": "Nail Care Oil",
+    "category": "hair",
+    "focus": "Nails & cuticles",
+    "desc_tr": "Tırnak bakım yağı, tedavi süresince tırnaklarda oluşan sorunların giderilmesinde destekleyici bakım serumudur. Kemoterapi tedavisinde kuruyan tırnak etlerine, kırılan, çatlayan ve sararan tırnaklara bakım yapmak için kullanılır. İçeriğinde tamamen doğal ve saf bitkisel yağlara yer verilmiştir. Kimyasal katkılar içermez",
+    "image": "images/products/nail-oil.webp",
+    "lead": "A nail care serum for cuticles and nails that dry, crack, or yellow during chemotherapy. Pure botanical oils — no heavy chemical additives.",
+    "points": [
+      "Cuticle comfort",
+      "Brittle nail support",
+      "Pure botanical oils",
+      "No synthetic fragrance"
+    ],
+    "category_label": "Hair, brow & nail"
+  },
+  {
+    "id": "castile",
+    "slug": "dogal-sivi-kastil-sabun-yeshim-serisi-tum-vucut--yuz-ve-el-temizligi-icin",
+    "source": "https://radikaaromaterapi.com/dogal-sivi-kastil-sabun-yeshim-serisi-tum-vucut--yuz-ve-el-temizligi-icin",
+    "title_tr": "Doğal Sıvı Kastil Sabun",
+    "title_en": "Liquid Castile Soap",
+    "category": "body",
+    "focus": "Hand, face & body",
+    "desc_tr": "Yeshim sıvı kastil sabunu, kemoterapi tedavisi süresince hassaslaşan cildin güvenli ve doğal temizliği için kullanılır. Yüz ve vücut temizliğine uygundur. Geleneksel olarak zeytinyağından üretilen, toksik olmayan, biyolojik olarak parçalanabilen bir sabundur. Kimyasal katkılar, koku, esans içermez.",
+    "image": "images/products/castile.webp",
+    "lead": "A traditional olive-oil castile soap for face and body when skin becomes sensitive during treatment. Non-toxic, biodegradable, free of fragrance and essence.",
+    "points": [
+      "Face & body safe",
+      "Olive-oil tradition",
+      "Biodegradable",
+      "No fragrance or essence"
+    ],
+    "category_label": "Body care"
+  },
+  {
+    "id": "spray",
+    "slug": "vucut-spreyi-yeshim-serisi-hassas-ciltleri-ferahlatmak-ve-nemlendirmek-icin",
+    "source": "https://radikaaromaterapi.com/vucut-spreyi-yeshim-serisi-hassas-ciltleri-ferahlatmak-ve-nemlendirmek-icin",
+    "title_tr": "Vücut Spreyi",
+    "title_en": "Body Spray",
+    "category": "body",
+    "focus": "Sensitive skin mist",
+    "desc_tr": "Yeshim vücut spreyi, tedavi süresince ve sonrasında, cildi ferahlatmak, hassas olan ciltleri nemlendirmek ve bakımını yapmak üzere hazırlanmıştır. Deodorant yerine kullanılabilir. Cilde hoş bir koku bırakır, cildi yatıştırır, bakteri oluşumunu engellemeye yardımcı olur. Kimyasal katkılar, koku, esans içermez.",
+    "image": "images/products/spray.webp",
+    "lead": "A refreshing body mist for sensitive skin during and after treatment. Can stand in for deodorant while calming skin and helping limit bacterial buildup.",
+    "points": [
+      "Sensitive-skin mist",
+      "Deodorant alternative",
+      "Calming feel",
+      "No synthetic fragrance"
+    ],
+    "category_label": "Body care"
+  },
+  {
+    "id": "protective-balm",
+    "slug": "koruyucu-merhem-yeshim-serisi-ciltte-mantar-olusumunu-ve-enfeksiyonu-engellemek-icin",
+    "source": "https://radikaaromaterapi.com/koruyucu-merhem-yeshim-serisi-ciltte-mantar-olusumunu-ve-enfeksiyonu-engellemek-icin",
+    "title_tr": "Koruyucu Bakım Balmı",
+    "title_en": "Protective Care Balm",
+    "category": "balm",
+    "focus": "Protective balm",
+    "desc_tr": "Yeshim koruyucu merhem, radyoterapi tedavisi süresinde, zayıflayan bağışıklık sistemi nedeniyle, mantar ve enfeksiyona açık olan ciltlerde ortaya çıkabilecek mantarları engellemek ve var olanları gidermek amacıyla hazırlanmıştır. İçeriğinde tamamen doğal bitkisel yağlara yer verilmiştir. Kimyasal katkılar içermez.",
+    "image": "images/products/protective-balm.webp",
+    "lead": "A protective balm prepared for skin that is more open to fungal issues during radiotherapy, when immunity is strained. Pure botanical oils — no chemical additives.",
+    "points": [
+      "Radiotherapy-period care",
+      "Protective barrier story",
+      "Pure botanical oils",
+      "No synthetic additives"
+    ],
+    "category_label": "Balms"
+  },
+  {
+    "id": "scalp-oil",
+    "slug": "yeshim-sac-derisi-bakim-yagi-dokulmeyi-engellemek-ve-sac-koklerini-guclendirmek-icin",
+    "source": "https://radikaaromaterapi.com/yeshim-sac-derisi-bakim-yagi-dokulmeyi-engellemek-ve-sac-koklerini-guclendirmek-icin",
+    "title_tr": "Saç Derisi Bakım Yağı",
+    "title_en": "Scalp Care Oil",
+    "category": "hair",
+    "focus": "Scalp & roots",
+    "desc_tr": "Saç derisi bakım yağı, tedavi süresince dökülen saçların köklerini besleyerek yeni saç oluşumunu desteklemek için kullanılır. Dökülen saçların yeniden çıkmasına, saç derisinde oluşan sorunların giderilmesine yardımcıdır. İçeriğinde tamamen doğal ve saf bitkisel yağlara yer verilmiştir. Kimyasal katkılar içermez.",
+    "image": "images/products/scalp-oil.webp",
+    "lead": "A scalp oil that feeds hair roots during shedding so new growth has a calmer place to begin. Helps with scalp discomfort using only pure botanical oils.",
+    "points": [
+      "Root nourishment",
+      "Supports new growth",
+      "Scalp comfort",
+      "Pure plant oils"
+    ],
+    "category_label": "Hair, brow & nail"
+  },
+  {
+    "id": "lotion",
+    "slug": "nemlendirici-vucut-losyonu-yeshim-serisi-kuru-ciltleri-beslemek-ve-nemlendirmek-icin",
+    "source": "https://radikaaromaterapi.com/nemlendirici-vucut-losyonu-yeshim-serisi-kuru-ciltleri-beslemek-ve-nemlendirmek-icin",
+    "title_tr": "Nemlendirici Vücut Losyonu",
+    "title_en": "Moisturizing Body Lotion",
+    "category": "body",
+    "focus": "Dry skin lotion",
+    "desc_tr": "Yeshim vücut losyonu, tedavi süresince ve sonrasında hassaslaşan ve kuruyan ciltleri nemlendirmek ve bakımını yapmak üzere hazırlanmıştır. Güneşin zararlarından koruyucu etkiye de sahiptir. İçeriğinde tamamen doğal ve saf bitkisel yağlara yer verilmiştir. Kimyasal katkılar içermez.",
+    "image": "images/products/lotion.webp",
+    "lead": "A moisturizing body lotion for skin that becomes sensitive and dry during or after treatment. Pure botanical oils with a gentle protective feel.",
+    "points": [
+      "Daily moisture",
+      "Sensitive & dry skin",
+      "Pure botanical oils",
+      "No synthetic additives"
+    ],
+    "category_label": "Body care"
+  },
+  {
+    "id": "repair-balm",
+    "slug": "onarici-merhem-yeshim-serisi-ciltte-olusan-yara--yanik-ve-hasarlar-icin",
+    "source": "https://radikaaromaterapi.com/onarici-merhem-yeshim-serisi-ciltte-olusan-yara--yanik-ve-hasarlar-icin",
+    "title_tr": "Yoğun Bakım Balmı",
+    "title_en": "Intensive Care Balm",
+    "category": "balm",
+    "focus": "Repair balm",
+    "desc_tr": "Yeshim onarıcı merhem, radyoterapi tedavisi süresinde, zayıflayan bağışıklık sistemi nedeniyle deforme olan, enfeksiyona açık olan ciltlerde oluşan yara, yanık ve hasarlı cildin iyileşmesinde destekleyicidir. Hücre yenileyicidir. İçeriğinde tamamen doğal bitkisel yağlara yer verilmiştir. Kimyasal katkılar içermez.",
+    "image": "images/products/repair-balm.webp",
+    "lead": "An intensive balm to support skin that is wounded, burned, or damaged during radiotherapy. Cell-renewing botanical oils — no chemical additives.",
+    "points": [
+      "Repair-focused",
+      "Radiotherapy support",
+      "Cell-renewing story",
+      "Pure botanical oils"
+    ],
+    "category_label": "Balms"
+  },
+  {
+    "id": "body-oil",
+    "slug": "vucut-bakim-yagi-yeshim-serisi-kuru-ciltleri-beslemek-ve-nemlendirmek-icin",
+    "source": "https://radikaaromaterapi.com/vucut-bakim-yagi-yeshim-serisi-kuru-ciltleri-beslemek-ve-nemlendirmek-icin",
+    "title_tr": "Vücut Bakım Yağı",
+    "title_en": "Body Care Oil",
+    "category": "body",
+    "focus": "Dry skin oil",
+    "desc_tr": "Yeshim vücut bakım yağı, tedavi süresince ve sonrasında hassaslaşan ve kuruyan ciltleri nemlendirmek ve bakımını yapmak üzere hazırlanmış doğal yağ karışımıdır. İçeriğinde tamamen doğal ve saf bitkisel yağlara yer verilmiştir. Kimyasal katkılar içermez.",
+    "image": "images/products/body-oil.webp",
+    "lead": "A rich botanical oil blend to nourish and moisturize skin that dries and sensitizes during or after treatment.",
+    "points": [
+      "Deep nourishment",
+      "Dry, sensitive skin",
+      "Pure plant oils",
+      "No synthetic fragrance"
+    ],
+    "category_label": "Body care"
+  },
+  {
+    "id": "hair-serum",
+    "slug": "guclendirici-sac-bakim-yagi-yeshim-serisi-sac-tellerini-guclendirmek-ve-sac-uzamasini-hizlandirmak-icin",
+    "source": "https://radikaaromaterapi.com/guclendirici-sac-bakim-yagi-yeshim-serisi-sac-tellerini-guclendirmek-ve-sac-uzamasini-hizlandirmak-icin",
+    "title_tr": "Güçlendirici Saç Serumu",
+    "title_en": "Strengthening Hair Serum",
+    "category": "hair",
+    "focus": "Hair strength & growth",
+    "desc_tr": "Güçlendirici saç bakım yağı, tedavi süresinde dökülen ve yeniden çıkmaya başlayan saçların, daha güçlü, sağlıklı uzamasını destekleyen bakım ürünüdür. Cildi arındırır, kafa derisi sebumunu düzenler ve saç sağlığını güçlendirir. İçeriğinde tamamen doğal ve saf bitkisel yağlara yer verilmiştir. Kimyasal katkılar içermez.",
+    "image": "images/products/hair-serum.webp",
+    "lead": "A strengthening hair serum for strands returning after treatment — clarifies the scalp, balances sebum, and supports stronger, healthier growth.",
+    "points": [
+      "Strength & growth support",
+      "Scalp balance",
+      "Pure botanical oils",
+      "No chemical additives"
+    ],
+    "category_label": "Hair, brow & nail"
+  }
+]
