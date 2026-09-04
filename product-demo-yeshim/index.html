@@ -38,17 +38,21 @@
         <img class="stage__img" data-stage="care" src="images/products/brow-oil.webp" width="1080" height="1080" alt="Brow Care Oil" loading="lazy">
         <img class="stage__img" data-stage="range" src="images/products/lotion.webp" width="1080" height="1080" alt="Moisturizing Body Lotion" loading="lazy">
         <img class="stage__img" data-stage="contact" src="images/products/repair-balm.webp" width="1080" height="1080" alt="Intensive Care Balm" loading="lazy">
+        <div class="stage__nav" role="group" aria-label="Product images">
+          <button type="button" class="stage__btn" data-stage-prev aria-label="Previous image">‹</button>
+          <button type="button" class="stage__btn" data-stage-next aria-label="Next image">›</button>
+        </div>
       </div>
       <div class="stage__caption">
         <p class="stage__model">Yeshim Serisi</p>
         <p class="stage__line" data-stage-line>Care for sensitive treatment periods</p>
       </div>
-      <div class="stage__dots" aria-hidden="true">
-        <span data-dot="intro" class="is-on"></span>
-        <span data-dot="story"></span>
-        <span data-dot="care"></span>
-        <span data-dot="range"></span>
-        <span data-dot="contact"></span>
+      <div class="stage__dots" role="tablist" aria-label="Stage slides">
+        <button type="button" data-dot="intro" class="is-on" aria-label="intro" aria-current="true"></button>
+        <button type="button" data-dot="story" aria-label="story"></button>
+        <button type="button" data-dot="care" aria-label="care"></button>
+        <button type="button" data-dot="range" aria-label="range"></button>
+        <button type="button" data-dot="contact" aria-label="contact"></button>
       </div>
     </div>
     </aside>

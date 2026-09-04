@@ -39,18 +39,22 @@
         <img class="stage__img" data-stage="evidence" src="images/glove-side.jpg" width="1200" height="900" alt="Steadi-3 Plus profile" loading="lazy">
         <img class="stage__img" data-stage="stories" src="images/testimonial-betty.jpg" width="1000" height="1250" alt="Betty with Steadi-3 Plus" loading="lazy">
         <img class="stage__img" data-stage="contact" src="images/glove-worn.jpg" width="1200" height="900" alt="Steadi-3 Plus in daily use" loading="lazy">
+        <div class="stage__nav" role="group" aria-label="Product images">
+          <button type="button" class="stage__btn" data-stage-prev aria-label="Previous image">‹</button>
+          <button type="button" class="stage__btn" data-stage-next aria-label="Next image">›</button>
+        </div>
       </div>
       <div class="stage__caption">
         <p class="stage__model">Steadi-3 Plus</p>
         <p class="stage__line" data-stage-line>Battery-free tremor stabilization</p>
       </div>
-      <div class="stage__dots" aria-hidden="true">
-        <span data-dot="intro" class="is-on"></span>
-        <span data-dot="how"></span>
-        <span data-dot="facts"></span>
-        <span data-dot="evidence"></span>
-        <span data-dot="stories"></span>
-        <span data-dot="contact"></span>
+      <div class="stage__dots" role="tablist" aria-label="Stage slides">
+        <button type="button" data-dot="intro" class="is-on" aria-label="Intro" aria-current="true"></button>
+        <button type="button" data-dot="how" aria-label="How it works"></button>
+        <button type="button" data-dot="facts" aria-label="The object"></button>
+        <button type="button" data-dot="evidence" aria-label="Evidence"></button>
+        <button type="button" data-dot="stories" aria-label="Stories"></button>
+        <button type="button" data-dot="contact" aria-label="Ask MedGlobe"></button>
       </div>
     </div>
     </aside>

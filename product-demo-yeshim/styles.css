@@ -924,3 +924,59 @@ blockquote cite {
   color: var(--mute);
 }
 .source-note a { color: rgb(var(--mg-sky)); }
+
+
+.stage__frame {
+  touch-action: pan-y;
+}
+.stage__nav {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.55rem;
+  pointer-events: none;
+}
+.stage__btn {
+  pointer-events: auto;
+  width: 2.2rem;
+  height: 2.2rem;
+  border: 0;
+  border-radius: 999px;
+  background: rgb(var(--mg-paper) / 88%);
+  color: rgb(var(--mg-navy));
+  font-size: 1.45rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgb(var(--mg-navy) / 12%);
+  transition: background 0.2s var(--ease), transform 0.2s var(--ease);
+}
+.stage__btn:hover,
+.stage__btn:focus-visible {
+  background: #fff;
+  outline: none;
+  transform: scale(1.05);
+}
+.stage__dots button,
+.stage__dots span {
+  width: 0.4rem;
+  height: 0.4rem;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: rgb(var(--mg-navy) / 16%);
+  cursor: pointer;
+  transition: width 0.35s var(--ease), background 0.35s var(--ease);
+}
+.stage__dots button:hover,
+.stage__dots button:focus-visible {
+  background: rgb(var(--mg-navy) / 42%);
+  outline: none;
+}
+.stage__dots button.is-on,
+.stage__dots span.is-on {
+  width: 1.25rem;
+  background: rgb(var(--mg-sky));
+}

@@ -38,17 +38,21 @@
         <img class="stage__img" data-stage="formula" src="../images/products/castile.webp" width="1080" height="1080" alt="Liquid Castile Soap" loading="lazy">
         <img class="stage__img" data-stage="range" src="../images/products/castile.webp" width="1080" height="1080" alt="Liquid Castile Soap" loading="lazy">
         <img class="stage__img" data-stage="contact" src="../images/products/castile.webp" width="1080" height="1080" alt="Liquid Castile Soap" loading="lazy">
+        <div class="stage__nav" role="group" aria-label="Product images">
+          <button type="button" class="stage__btn" data-stage-prev aria-label="Previous image">‹</button>
+          <button type="button" class="stage__btn" data-stage-next aria-label="Next image">›</button>
+        </div>
       </div>
       <div class="stage__caption">
         <p class="stage__model">Liquid Castile Soap</p>
         <p class="stage__line" data-stage-line>Hand, face & body</p>
       </div>
-      <div class="stage__dots" aria-hidden="true">
-        <span data-dot="intro" class="is-on"></span>
-        <span data-dot="about"></span>
-        <span data-dot="formula"></span>
-        <span data-dot="range"></span>
-        <span data-dot="contact"></span>
+      <div class="stage__dots" role="tablist" aria-label="Stage slides">
+        <button type="button" data-dot="intro" class="is-on" aria-label="intro" aria-current="true"></button>
+        <button type="button" data-dot="about" aria-label="about"></button>
+        <button type="button" data-dot="formula" aria-label="formula"></button>
+        <button type="button" data-dot="range" aria-label="range"></button>
+        <button type="button" data-dot="contact" aria-label="contact"></button>
       </div>
     </div>
     </aside>

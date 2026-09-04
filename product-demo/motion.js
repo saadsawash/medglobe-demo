@@ -10,28 +10,51 @@
     contact: "Ask MedGlobe about Steadi-3 Plus",
   };
 
+  const stage = document.querySelector(".stage");
+  const frame = stage?.querySelector(".stage__frame");
   const stageImgs = [...document.querySelectorAll(".stage__img")];
   const dots = [...document.querySelectorAll(".stage__dots [data-dot]")];
   const line = document.querySelector("[data-stage-line]");
   const chapters = [...document.querySelectorAll("[data-chapter]")];
+  const keys = stageImgs.map((img) => img.dataset.stage).filter(Boolean);
 
-  let active = "intro";
-  const setStage = (key) => {
-    if (!key || key === active) return;
-    active = key;
-    stageImgs.forEach((img) => {
-      img.classList.toggle("is-active", img.dataset.stage === key);
-    });
-    dots.forEach((dot) => {
-      dot.classList.toggle("is-on", dot.dataset.dot === key);
-    });
-    if (line && captions[key]) {
-      line.classList.add("is-swap");
-      window.setTimeout(() => {
-        line.textContent = captions[key];
-        line.classList.remove("is-swap");
-      }, 180);
+  let active = keys[0] || "intro";
+  let manualUntil = 0;
+
+  const setStage = (key, { scrollStory = false } = {}) => {
+    if (!key || !keys.includes(key)) return;
+    if (key !== active) {
+      active = key;
+      stageImgs.forEach((img) => {
+        img.classList.toggle("is-active", img.dataset.stage === key);
+      });
+      dots.forEach((dot) => {
+        const on = dot.dataset.dot === key;
+        dot.classList.toggle("is-on", on);
+        if (dot.tagName === "BUTTON") {
+          if (on) dot.setAttribute("aria-current", "true");
+          else dot.removeAttribute("aria-current");
+        }
+      });
+      if (line && captions[key]) {
+        line.classList.add("is-swap");
+        window.setTimeout(() => {
+          line.textContent = captions[key];
+          line.classList.remove("is-swap");
+        }, 180);
+      }
     }
+    if (scrollStory) {
+      const chapter = chapters.find((c) => c.dataset.chapter === key);
+      chapter?.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
+    }
+  };
+
+  const stepStage = (dir) => {
+    const i = Math.max(0, keys.indexOf(active));
+    const next = keys[(i + dir + keys.length) % keys.length];
+    manualUntil = performance.now() + 1200;
+    setStage(next, { scrollStory: true });
   };
 
   const onScroll = () => {
@@ -40,6 +63,8 @@
       const p = max > 0 ? (window.scrollY / max) * 100 : 0;
       bar.style.width = `${p}%`;
     }
+
+    if (performance.now() < manualUntil) return;
 
     const mid = window.innerHeight * 0.42;
     let current = active;
@@ -51,6 +76,40 @@
   };
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
+
+  stage?.querySelector("[data-stage-prev]")?.addEventListener("click", () => stepStage(-1));
+  stage?.querySelector("[data-stage-next]")?.addEventListener("click", () => stepStage(1));
+  dots.forEach((dot) => {
+    dot.addEventListener("click", () => {
+      manualUntil = performance.now() + 1200;
+      setStage(dot.dataset.dot, { scrollStory: true });
+    });
+  });
+
+  if (frame) {
+    let startX = 0;
+    let tracking = false;
+    frame.addEventListener(
+      "pointerdown",
+      (event) => {
+        if (event.pointerType === "mouse" && event.button !== 0) return;
+        if (event.target.closest(".stage__btn")) return;
+        tracking = true;
+        startX = event.clientX;
+      },
+      { passive: true }
+    );
+    frame.addEventListener("pointerup", (event) => {
+      if (!tracking) return;
+      tracking = false;
+      const dx = event.clientX - startX;
+      if (Math.abs(dx) < 42) return;
+      stepStage(dx < 0 ? 1 : -1);
+    });
+    frame.addEventListener("pointercancel", () => {
+      tracking = false;
+    });
+  }
 
   const form = document.querySelector(".block--ask form");
   if (form) form.addEventListener("submit", (e) => e.preventDefault());
@@ -94,7 +153,6 @@
     root.querySelectorAll("[data-plot]").forEach(startPlot);
   };
 
-  // Count-up stats
   const animateCount = (el) => {
     const target = Number(el.dataset.count || 0);
     if (!target) return;
